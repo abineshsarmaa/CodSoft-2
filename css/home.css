@@ -1,193 +1,97 @@
-/* ==================================
-   EPIC JOURNEYS - PREMIUM HOME CSS
-================================== */
-
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
-
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
-
-
-body{
-
-    overflow-x:hidden;
-
-}
-
-
-
 /* ===============================
-   HERO SECTION
+   MOBILE NAVBAR FIX
 ================================ */
 
 
-.home-header{
-
-
-    min-height:100vh;
-
-
-    background:
-
-    linear-gradient(
-    120deg,
-    rgba(0,0,0,.75),
-    rgba(0,0,0,.35)
-    ),
-
-    url("../one.jpg");
-
-
-
-    background-size:cover;
-
-    background-position:center;
-
-
-    position:relative;
-
-
-    animation:bgZoom 15s infinite alternate;
-
-
-}
-
-
-
-@keyframes bgZoom{
-
-
-from{
-
-background-size:100%;
-
-}
-
-
-to{
-
-background-size:115%;
-
-}
-
-
-}
-
-
-
-
-
-
-
-/* ===============================
- NAVBAR
-================================ */
+@media(max-width:768px){
 
 
 .navbar{
 
+    width:95%;
 
-    width:90%;
+    padding:15px 18px;
 
+    border-radius:25px;
 
-    margin:auto;
-
-
-    top:20px;
-
-
-    left:0;
-
-
-    right:0;
-
-
-    position:fixed;
-
-
-    z-index:999;
-
-
-    padding:18px 30px;
-
-
-
-    display:flex;
-
-
-    justify-content:space-between;
-
-
-    align-items:center;
-
-
-
-
-    background:rgba(255,255,255,.12);
-
-
-    backdrop-filter:blur(15px);
-
-
-    border-radius:50px;
-
-
-    border:1px solid rgba(255,255,255,.2);
-
+    flex-wrap:wrap;
 
 }
-
-
 
 
 
 .logo{
 
-
-    color:white;
-
-
-    text-decoration:none;
-
-
-    font-size:28px;
-
-
-    font-weight:700;
-
+    font-size:20px;
 
 }
 
 
 
-.logo i{
+.nav-buttons{
 
+    display:flex;
 
-    color:#ff6b6b;
-
-
-    margin-right:8px;
-
+    gap:5px;
 
 }
 
 
+
+.nav-buttons a{
+
+    padding:8px 12px;
+
+    font-size:11px;
+
+    white-space:nowrap;
+
+}
+
+
+
+.menu-icon{
+
+    display:block;
+
+}
 
 
 
 .nav-links{
 
 
+    order:3;
+
+    width:100%;
+
+
+    display:none;
+
+
+    flex-direction:column;
+
+
+    background:rgba(0,0,0,.9);
+
+
+    margin-top:15px;
+
+
+    padding:20px;
+
+
+    border-radius:20px;
+
+
+}
+
+
+
+.nav-links.active{
+
+
     display:flex;
-
-
-    gap:30px;
 
 
 }
@@ -197,330 +101,7 @@ background-size:115%;
 .nav-links a{
 
 
-    color:white;
-
-
-    text-decoration:none;
-
-
-    font-weight:500;
-
-
-    position:relative;
-
-
-}
-
-
-
-.nav-links a::after{
-
-
-    content:"";
-
-
-    position:absolute;
-
-
-    left:0;
-
-
-    bottom:-8px;
-
-
-    height:3px;
-
-
-    width:0;
-
-
-    background:#ff6b6b;
-
-
-    transition:.4s;
-
-
-}
-
-
-
-.nav-links a:hover::after{
-
-
-    width:100%;
-
-
-}
-
-
-
-
-
-
-
-.nav-buttons a{
-
-
-    text-decoration:none;
-
-
-    color:white;
-
-
-    background:#ff6b6b;
-
-
-    padding:12px 22px;
-
-
-    border-radius:30px;
-
-
-    margin-left:8px;
-
-
-    transition:.4s;
-
-
-}
-
-
-
-
-.nav-buttons a:hover{
-
-
-    background:white;
-
-
-    color:#ff6b6b;
-
-
-    transform:translateY(-4px);
-
-
-}
-
-
-
-
-
-
-
-
-/* ===============================
- HERO CONTENT
-================================ */
-
-
-
-.hero{
-
-
-    min-height:100vh;
-
-
-    display:flex;
-
-
-    justify-content:center;
-
-
-    align-items:center;
-
-
-    text-align:center;
-
-
-    color:white;
-
-
-    padding:20px;
-
-
-}
-
-
-
-
-
-.hero-content{
-
-
-    animation:heroShow 1.5s ease;
-
-
-}
-
-
-
-
-@keyframes heroShow{
-
-
-from{
-
-
-opacity:0;
-
-
-transform:translateY(80px);
-
-
-}
-
-
-to{
-
-
-opacity:1;
-
-
-transform:translateY(0);
-
-
-}
-
-
-}
-
-
-
-
-
-.hero h4{
-
-
-    letter-spacing:8px;
-
-
-    font-size:14px;
-
-
-    color:#ddd;
-
-
-}
-
-
-
-
-.hero h1{
-
-
-    font-size:75px;
-
-
-    line-height:1.1;
-
-
-    margin:25px 0;
-
-
-    font-weight:800;
-
-
-}
-
-
-
-.hero p{
-
-
-    font-size:19px;
-
-
-    max-width:650px;
-
-
-    margin:auto;
-
-
-    color:#eee;
-
-
-}
-
-
-
-
-
-
-
-/* BUTTONS */
-
-
-.hero-buttons a{
-
-
-    display:inline-flex;
-
-
-    align-items:center;
-
-
-    gap:10px;
-
-
-    margin:35px 8px;
-
-
-    padding:16px 40px;
-
-
-    border-radius:50px;
-
-
-    background:#ff6b6b;
-
-
-    color:white;
-
-
-    text-decoration:none;
-
-
-    font-weight:600;
-
-
-    transition:.4s;
-
-
-    box-shadow:0 10px 30px rgba(255,107,107,.4);
-
-
-}
-
-
-
-
-.hero-buttons a:hover{
-
-
-    transform:translateY(-8px) scale(1.05);
-
-
-}
-
-
-
-
-
-
-
-
-/* ===============================
- SERVICES
-================================ */
-
-
-.services{
-
-
-    padding:90px 8%;
-
-
-    background:#fafafa;
+    padding:12px;
 
 
     text-align:center;
@@ -528,295 +109,6 @@ transform:translateY(0);
 
 }
 
-
-
-.services h2{
-
-
-    font-size:42px;
-
-
-    margin-bottom:50px;
-
-
-}
-
-
-
-
-.service-container{
-
-
-    display:grid;
-
-
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-
-
-    gap:35px;
-
-
-}
-
-
-
-
-.service-card{
-
-
-    background:white;
-
-
-    padding:40px 30px;
-
-
-    border-radius:30px;
-
-
-    box-shadow:0 20px 50px rgba(0,0,0,.08);
-
-
-    transition:.5s;
-
-
-}
-
-
-
-.service-card:hover{
-
-
-    transform:translateY(-15px);
-
-
-}
-
-
-
-
-.service-card i{
-
-
-    font-size:50px;
-
-
-    color:#ff6b6b;
-
-
-    margin-bottom:20px;
-
-
-}
-
-
-
-
-
-
-
-/* ===============================
- BANNERS
-================================ */
-
-
-.offer-banner,
-.booking-banner{
-
-
-    margin:70px 8%;
-
-
-    padding:80px 20px;
-
-
-    border-radius:35px;
-
-
-    text-align:center;
-
-
-    color:white;
-
-
-
-    background:
-
-    linear-gradient(
-    rgba(0,0,0,.6),
-    rgba(0,0,0,.6)
-    ),
-
-    url("../one.jpg");
-
-
-
-    background-size:cover;
-
-
-}
-
-
-
-.offer-banner a,
-.booking-banner a{
-
-
-    display:inline-block;
-
-
-    margin-top:25px;
-
-
-    padding:14px 35px;
-
-
-    background:#ff6b6b;
-
-
-    color:white;
-
-
-    text-decoration:none;
-
-
-    border-radius:30px;
-
-
-}
-
-
-
-
-
-
-/* ===============================
- FOOTER
-================================ */
-
-
-footer{
-
-
-    background:#111;
-
-
-    color:white;
-
-
-    padding:25px;
-
-
-    text-align:center;
-
-
-}
-
-
-
-
-
-
-/* ===============================
- MOBILE
-================================ */
-
-
-.menu-icon{
-
-
-    display:none;
-
-
-    color:white;
-
-
-    font-size:25px;
-
-
-}
-
-
-
-
-
-@media(max-width:768px){
-
-
-
-.navbar{
-
-
-    width:95%;
-
-
-}
-
-
-
-.nav-links{
-
-
-    display:none;
-
-
-}
-
-
-
-
-.menu-icon{
-
-
-    display:block;
-
-
-}
-
-
-
-.nav-buttons a{
-
-
-    padding:8px 12px;
-
-
-    font-size:12px;
-
-
-}
-
-
-
-.hero h1{
-
-
-    font-size:40px;
-
-
-}
-
-
-
-.hero h4{
-
-
-    font-size:11px;
-
-
-    letter-spacing:3px;
-
-
-}
-
-
-
-.hero p{
-
-
-    font-size:15px;
-
-
-}
 
 
 }
