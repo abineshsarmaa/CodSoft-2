@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+/* ==================================
+   EPIC JOURNEYS - PREMIUM HOME CSS
+================================== */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 
 *{
@@ -11,15 +16,15 @@
 
 body{
 
-    background:#f8f8f8;
+    overflow-x:hidden;
 
 }
 
 
 
-/* ======================
-   HERO BACKGROUND
-====================== */
+/* ===============================
+   HERO SECTION
+================================ */
 
 
 .home-header{
@@ -45,14 +50,17 @@ body{
     background-position:center;
 
 
-    animation:zoom 15s infinite alternate;
+    position:relative;
+
+
+    animation:bgZoom 15s infinite alternate;
 
 
 }
 
 
 
-@keyframes zoom{
+@keyframes bgZoom{
 
 
 from{
@@ -68,46 +76,74 @@ background-size:115%;
 
 }
 
+
 }
 
 
 
 
 
-/* ======================
+
+
+/* ===============================
  NAVBAR
-====================== */
+================================ */
 
 
 .navbar{
 
 
-    width:100%;
-
-    padding:22px 8%;
+    width:90%;
 
 
-    display:flex;
+    margin:auto;
 
-    justify-content:space-between;
 
-    align-items:center;
+    top:20px;
+
+
+    left:0;
+
+
+    right:0;
 
 
     position:fixed;
 
-    top:0;
 
-    z-index:1000;
+    z-index:999;
 
 
-    background:rgba(255,255,255,.08);
+    padding:18px 30px;
+
+
+
+    display:flex;
+
+
+    justify-content:space-between;
+
+
+    align-items:center;
+
+
+
+
+    background:rgba(255,255,255,.12);
 
 
     backdrop-filter:blur(15px);
 
 
+    border-radius:50px;
+
+
+    border:1px solid rgba(255,255,255,.2);
+
+
 }
+
+
 
 
 
@@ -116,9 +152,12 @@ background-size:115%;
 
     color:white;
 
+
     text-decoration:none;
 
-    font-size:30px;
+
+    font-size:28px;
+
 
     font-weight:700;
 
@@ -133,6 +172,9 @@ background-size:115%;
     color:#ff6b6b;
 
 
+    margin-right:8px;
+
+
 }
 
 
@@ -144,7 +186,8 @@ background-size:115%;
 
     display:flex;
 
-    gap:35px;
+
+    gap:30px;
 
 
 }
@@ -156,7 +199,9 @@ background-size:115%;
 
     color:white;
 
+
     text-decoration:none;
+
 
     font-weight:500;
 
@@ -173,17 +218,24 @@ background-size:115%;
 
     content:"";
 
+
     position:absolute;
 
-    width:0;
-
-    height:2px;
-
-    background:#ff6b6b;
 
     left:0;
 
-    bottom:-5px;
+
+    bottom:-8px;
+
+
+    height:3px;
+
+
+    width:0;
+
+
+    background:#ff6b6b;
+
 
     transition:.4s;
 
@@ -204,12 +256,15 @@ background-size:115%;
 
 
 
+
+
 .nav-buttons a{
 
 
-    color:white;
-
     text-decoration:none;
+
+
+    color:white;
 
 
     background:#ff6b6b;
@@ -237,9 +292,11 @@ background-size:115%;
 
     background:white;
 
+
     color:#ff6b6b;
 
-    transform:translateY(-3px);
+
+    transform:translateY(-4px);
 
 
 }
@@ -248,9 +305,13 @@ background-size:115%;
 
 
 
-/* ======================
+
+
+
+/* ===============================
  HERO CONTENT
-====================== */
+================================ */
+
 
 
 .hero{
@@ -281,38 +342,48 @@ background-size:115%;
 
 
 
+
+
 .hero-content{
 
 
-    animation:up 1.5s ease;
+    animation:heroShow 1.5s ease;
 
 
 }
 
 
 
-@keyframes up{
+
+@keyframes heroShow{
 
 
 from{
 
+
 opacity:0;
 
+
 transform:translateY(80px);
+
 
 }
 
 
 to{
 
+
 opacity:1;
+
 
 transform:translateY(0);
 
+
 }
 
 
 }
+
 
 
 
@@ -320,24 +391,33 @@ transform:translateY(0);
 .hero h4{
 
 
-    letter-spacing:6px;
+    letter-spacing:8px;
 
-    font-size:15px;
+
+    font-size:14px;
+
+
+    color:#ddd;
 
 
 }
 
 
 
+
 .hero h1{
 
 
-    font-size:70px;
+    font-size:75px;
 
-    line-height:1.15;
+
+    line-height:1.1;
 
 
     margin:25px 0;
+
+
+    font-weight:800;
 
 
 }
@@ -347,11 +427,16 @@ transform:translateY(0);
 .hero p{
 
 
+    font-size:19px;
+
+
     max-width:650px;
+
 
     margin:auto;
 
-    font-size:18px;
+
+    color:#eee;
 
 
 }
@@ -360,16 +445,27 @@ transform:translateY(0);
 
 
 
+
+
+/* BUTTONS */
+
+
 .hero-buttons a{
 
 
-    display:inline-block;
+    display:inline-flex;
 
 
-    margin:30px 8px;
+    align-items:center;
 
 
-    padding:15px 40px;
+    gap:10px;
+
+
+    margin:35px 8px;
+
+
+    padding:16px 40px;
 
 
     border-radius:50px;
@@ -384,7 +480,13 @@ transform:translateY(0);
     text-decoration:none;
 
 
+    font-weight:600;
+
+
     transition:.4s;
+
+
+    box-shadow:0 10px 30px rgba(255,107,107,.4);
 
 
 }
@@ -395,10 +497,7 @@ transform:translateY(0);
 .hero-buttons a:hover{
 
 
-    transform:scale(1.08);
-
-
-    box-shadow:0 10px 30px rgba(255,107,107,.5);
+    transform:translateY(-8px) scale(1.05);
 
 
 }
@@ -407,15 +506,21 @@ transform:translateY(0);
 
 
 
-/* ======================
+
+
+
+/* ===============================
  SERVICES
-====================== */
+================================ */
 
 
 .services{
 
 
     padding:90px 8%;
+
+
+    background:#fafafa;
 
 
     text-align:center;
@@ -428,7 +533,8 @@ transform:translateY(0);
 .services h2{
 
 
-    font-size:40px;
+    font-size:42px;
+
 
     margin-bottom:50px;
 
@@ -444,14 +550,14 @@ transform:translateY(0);
     display:grid;
 
 
-    grid-template-columns:
-    repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 
 
-    gap:30px;
+    gap:35px;
 
 
 }
+
 
 
 
@@ -461,20 +567,19 @@ transform:translateY(0);
     background:white;
 
 
-    padding:40px;
+    padding:40px 30px;
 
 
-    border-radius:25px;
+    border-radius:30px;
 
 
-    box-shadow:0 15px 40px rgba(0,0,0,.08);
+    box-shadow:0 20px 50px rgba(0,0,0,.08);
 
 
     transition:.5s;
 
 
 }
-
 
 
 
@@ -492,7 +597,7 @@ transform:translateY(0);
 .service-card i{
 
 
-    font-size:45px;
+    font-size:50px;
 
 
     color:#ff6b6b;
@@ -508,9 +613,112 @@ transform:translateY(0);
 
 
 
-/* ======================
+
+/* ===============================
+ BANNERS
+================================ */
+
+
+.offer-banner,
+.booking-banner{
+
+
+    margin:70px 8%;
+
+
+    padding:80px 20px;
+
+
+    border-radius:35px;
+
+
+    text-align:center;
+
+
+    color:white;
+
+
+
+    background:
+
+    linear-gradient(
+    rgba(0,0,0,.6),
+    rgba(0,0,0,.6)
+    ),
+
+    url("../one.jpg");
+
+
+
+    background-size:cover;
+
+
+}
+
+
+
+.offer-banner a,
+.booking-banner a{
+
+
+    display:inline-block;
+
+
+    margin-top:25px;
+
+
+    padding:14px 35px;
+
+
+    background:#ff6b6b;
+
+
+    color:white;
+
+
+    text-decoration:none;
+
+
+    border-radius:30px;
+
+
+}
+
+
+
+
+
+
+/* ===============================
+ FOOTER
+================================ */
+
+
+footer{
+
+
+    background:#111;
+
+
+    color:white;
+
+
+    padding:25px;
+
+
+    text-align:center;
+
+
+}
+
+
+
+
+
+
+/* ===============================
  MOBILE
-====================== */
+================================ */
 
 
 .menu-icon{
@@ -518,12 +726,15 @@ transform:translateY(0);
 
     display:none;
 
+
     color:white;
 
-    font-size:28px;
+
+    font-size:25px;
 
 
 }
+
 
 
 
@@ -531,12 +742,25 @@ transform:translateY(0);
 @media(max-width:768px){
 
 
+
+.navbar{
+
+
+    width:95%;
+
+
+}
+
+
+
 .nav-links{
 
 
     display:none;
 
+
 }
+
 
 
 
@@ -555,6 +779,7 @@ transform:translateY(0);
 
     padding:8px 12px;
 
+
     font-size:12px;
 
 
@@ -565,7 +790,7 @@ transform:translateY(0);
 .hero h1{
 
 
-    font-size:38px;
+    font-size:40px;
 
 
 }
@@ -578,8 +803,20 @@ transform:translateY(0);
     font-size:11px;
 
 
+    letter-spacing:3px;
+
+
 }
 
+
+
+.hero p{
+
+
+    font-size:15px;
+
+
+}
 
 
 }
