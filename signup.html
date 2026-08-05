@@ -7,9 +7,16 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Create Account</title>
 
-<link rel="stylesheet" href="style.css">
+<title>Create Account | Epic Journeys</title>
+
+
+<link rel="stylesheet" href="css/signup.css">
+
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
 
 </head>
 
@@ -17,10 +24,27 @@
 <body>
 
 
-<section class="auth-page">
+
+<div class="signup-page">
 
 
-<div class="auth-box">
+
+<div class="signup-box">
+
+
+
+
+
+<div class="logo">
+
+<i class="fa-solid fa-plane"></i>
+
+Epic Journeys
+
+</div>
+
+
+
 
 
 <h1>
@@ -28,21 +52,160 @@ Create Account
 </h1>
 
 
+
+<p>
+Join Epic Journeys and start exploring.
+</p>
+
+
+
+
+
+
+
 <form>
 
 
-<input type="text" placeholder="Full Name">
+
+<div class="input-box">
 
 
-<input type="email" placeholder="Email">
+<i class="fa-solid fa-user"></i>
 
 
-<input type="password" placeholder="Password">
+<input
+
+type="text"
+
+placeholder="Full Name"
+
+required>
 
 
-<button>
-Sign Up
+</div>
+
+
+
+
+
+
+
+<div class="input-box">
+
+
+<i class="fa-solid fa-envelope"></i>
+
+
+<input
+
+type="email"
+
+placeholder="Email Address"
+
+required>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="input-box">
+
+
+<i class="fa-solid fa-phone"></i>
+
+
+<input
+
+type="tel"
+
+placeholder="Mobile Number"
+
+required>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="input-box">
+
+
+<i class="fa-solid fa-lock"></i>
+
+
+<input
+
+type="password"
+
+id="password"
+
+placeholder="Password"
+
+required>
+
+
+<i class="fa-solid fa-eye"
+id="showPassword"></i>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<button type="submit">
+
+Create Account
+
 </button>
+
+
+
+
+
+
+
+<p class="account">
+
+
+Already have an account?
+
+
+<a href="signin.html">
+
+Sign In
+
+</a>
+
+
+</p>
+
+
+
+
+
+<a href="index.html" class="home-link">
+
+← Back To Home
+
+</a>
+
+
 
 
 </form>
@@ -50,20 +213,19 @@ Sign Up
 
 
 
-<p>
-Already have account?
+</div>
 
-<a href="signin.html">
-Sign In
-</a>
-
-</p>
 
 
 </div>
 
 
-</section>
+
+
+
+
+
+<script src="js/signup.js"></script>
 
 
 </body>
