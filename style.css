@@ -1,6 +1,6 @@
 /* ===============================
-   EPIC JOURNEYS TRAVEL
-   COMPLETE STYLE CSS
+   EPIC JOURNEYS TRAVEL CSS
+   PART A
 ================================ */
 
 
@@ -21,8 +21,7 @@ html{
 
 
 body{
-    background:#f7f7f7;
-    color:#333;
+    background:#f5f5f5;
 }
 
 
@@ -41,21 +40,22 @@ body{
 
     position:fixed;
     top:0;
-    left:0;
 
     z-index:999;
 
-    background:rgba(0,0,0,0.45);
+    background:rgba(0,0,0,.45);
+
     backdrop-filter:blur(10px);
 
 }
 
 
-
 .logo{
 
     color:white;
+
     font-size:28px;
+
     font-weight:700;
 
 }
@@ -74,6 +74,7 @@ body{
 .nav-links{
 
     display:flex;
+
     gap:30px;
 
 }
@@ -83,8 +84,8 @@ body{
 .nav-links a{
 
     color:white;
+
     text-decoration:none;
-    font-size:16px;
 
     transition:.3s;
 
@@ -101,14 +102,13 @@ body{
 
 
 
-
 .nav-buttons a{
-
-    text-decoration:none;
 
     color:white;
 
     background:#ff6b6b;
+
+    text-decoration:none;
 
     padding:10px 18px;
 
@@ -116,7 +116,7 @@ body{
 
     margin-left:8px;
 
-    transition:.4s;
+    transition:.3s;
 
 }
 
@@ -124,9 +124,7 @@ body{
 
 .nav-buttons a:hover{
 
-    background:#e63946;
-
-    transform:translateY(-3px);
+    background:crimson;
 
 }
 
@@ -136,11 +134,10 @@ body{
 
 
 
-/* ================= HOME PAGE ================= */
+/* ================= HOME ================= */
 
 
 .home-header{
-
 
     min-height:100vh;
 
@@ -160,31 +157,7 @@ body{
     background-position:center;
 
 
-    animation:zoomBg 15s infinite alternate;
-
-
 }
-
-
-
-@keyframes zoomBg{
-
-from{
-
-background-size:100%;
-
-}
-
-
-to{
-
-background-size:110%;
-
-}
-
-}
-
-
 
 
 
@@ -217,17 +190,7 @@ background-size:110%;
 
 .hero-content{
 
-
-    animation:fadeUp 1.5s;
-
-
-}
-
-
-
-.hero h4{
-
-    letter-spacing:5px;
+    animation:fade 1.5s;
 
 }
 
@@ -238,8 +201,6 @@ background-size:110%;
 
     font-size:65px;
 
-    line-height:1.2;
-
     margin:20px 0;
 
 
@@ -249,14 +210,9 @@ background-size:110%;
 
 .hero p{
 
-
-    max-width:650px;
-
     font-size:18px;
 
-
 }
-
 
 
 
@@ -267,7 +223,7 @@ background-size:110%;
     display:inline-block;
 
 
-    margin:25px 8px;
+    margin:20px 5px;
 
 
     padding:14px 35px;
@@ -282,7 +238,7 @@ background-size:110%;
     text-decoration:none;
 
 
-    border-radius:50px;
+    border-radius:30px;
 
 
     transition:.4s;
@@ -294,11 +250,7 @@ background-size:110%;
 
 .hero-buttons a:hover{
 
-
-    transform:scale(1.1);
-
-    background:#e63946;
-
+    transform:translateY(-8px);
 
 }
 
@@ -308,9 +260,7 @@ background-size:110%;
 
 
 
-
-/* ================= COMMON PAGE BANNER ================= */
-
+/* ================= PAGE BANNER ================= */
 
 
 .page-banner{
@@ -329,15 +279,12 @@ background-size:110%;
     flex-direction:column;
 
 
+    color:white;
+
     text-align:center;
 
 
-    color:white;
-
-
-
     background:
-
 
     linear-gradient(
     rgba(0,0,0,.6),
@@ -345,7 +292,6 @@ background-size:110%;
     ),
 
     url("one.jpg");
-
 
 
     background-size:cover;
@@ -357,9 +303,7 @@ background-size:110%;
 
 .page-banner h1{
 
-
     font-size:50px;
-
 
 }
 
@@ -369,9 +313,7 @@ background-size:110%;
 
 
 
-
 /* ================= CARDS ================= */
-
 
 
 .services,
@@ -415,10 +357,10 @@ background-size:110%;
     text-align:center;
 
 
-    box-shadow:0 15px 35px rgba(0,0,0,.1);
+    box-shadow:0 10px 30px #ddd;
 
 
-    transition:.5s;
+    transition:.4s;
 
 
 }
@@ -431,11 +373,10 @@ background-size:110%;
 .contact-card:hover{
 
 
-    transform:translateY(-15px);
+    transform:translateY(-12px);
 
 
 }
-
 
 
 
@@ -446,12 +387,7 @@ background-size:110%;
 
     font-size:45px;
 
-
     color:#ff6b6b;
-
-
-    margin-bottom:20px;
-
 
 }
 
@@ -460,17 +396,15 @@ background-size:110%;
 
 
 
-/* ================= OFFERS ================= */
+
+/* ================= OFFER ================= */
 
 
 .offer-card h2{
 
-
     color:#ff6b6b;
 
-
 }
-
 
 
 .offer-card a{
@@ -482,7 +416,7 @@ background-size:110%;
     margin-top:20px;
 
 
-    padding:12px 30px;
+    padding:12px 25px;
 
 
     background:#ff6b6b;
@@ -520,21 +454,10 @@ background-size:110%;
     grid-template-columns:1fr 1fr;
 
 
-    gap:40px;
+    gap:30px;
 
 
 }
-
-
-
-.contact-card{
-
-
-    text-align:left;
-
-
-}
-
 
 
 
@@ -551,10 +474,10 @@ textarea{
     margin:10px 0;
 
 
-    border:1px solid #ddd;
-
-
     border-radius:10px;
+
+
+    border:1px solid #ddd;
 
 
 }
@@ -563,12 +486,9 @@ textarea{
 
 textarea{
 
-
     height:130px;
 
-
 }
-
 
 
 
@@ -600,16 +520,6 @@ button{
 
 
 
-button:hover{
-
-
-    background:#e63946;
-
-
-}
-
-
-
 
 
 
@@ -634,7 +544,6 @@ button:hover{
 
     background:
 
-
     linear-gradient(
     rgba(0,0,0,.6),
     rgba(0,0,0,.6)
@@ -653,185 +562,19 @@ button:hover{
 .booking-box{
 
 
-    background:white;
-
-
     width:90%;
 
 
     max-width:600px;
 
 
-    padding:40px;
-
-
-    border-radius:25px;
-
-
-}
-
-
-
-
-
-
-
-
-/* ================= LOGIN SIGNUP ================= */
-
-
-.auth-page{
-
-
-    min-height:100vh;
-
-
-    display:flex;
-
-
-    justify-content:center;
-
-
-    align-items:center;
-
-
-    background:
-
-
-    linear-gradient(
-    rgba(0,0,0,.6),
-    rgba(0,0,0,.6)
-    ),
-
-    url("one.jpg");
-
-
-    background-size:cover;
-
-
-}
-
-
-
-.auth-box{
-
-
     background:white;
 
 
-    width:90%;
-
-
-    max-width:420px;
-
-
     padding:40px;
 
 
     border-radius:25px;
-
-
-    text-align:center;
-
-
-    animation:fadeUp 1s;
-
-
-}
-
-
-
-
-
-.auth-box h1{
-
-
-    margin-bottom:20px;
-
-
-}
-
-
-
-.auth-box a{
-
-
-    color:#ff6b6b;
-
-
-    text-decoration:none;
-
-
-}
-
-
-
-
-
-
-/* ================= BANNERS ================= */
-
-
-.offer-banner,
-.booking-banner{
-
-
-    margin:50px 8%;
-
-
-    padding:60px 20px;
-
-
-    text-align:center;
-
-
-    color:white;
-
-
-    border-radius:25px;
-
-
-
-    background:
-
-    linear-gradient(
-    rgba(0,0,0,.5),
-    rgba(0,0,0,.5)
-    ),
-
-    url("one.jpg");
-
-    background-size:cover;
-
-
-}
-
-
-
-
-.offer-banner a,
-.booking-banner a{
-
-
-    display:inline-block;
-
-
-    margin-top:20px;
-
-
-    background:#ff6b6b;
-
-
-    padding:12px 30px;
-
-
-    border-radius:30px;
-
-
-    color:white;
-
-
-    text-decoration:none;
 
 
 }
@@ -850,7 +593,6 @@ footer{
 
     background:#111;
 
-
     color:white;
 
 
@@ -867,19 +609,14 @@ footer{
 
 
 
-
-
-/* ================= ANIMATION ================= */
-
-
-@keyframes fadeUp{
+@keyframes fade{
 
 
 from{
 
 opacity:0;
 
-transform:translateY(50px);
+transform:translateY(40px);
 
 }
 
@@ -895,13 +632,265 @@ transform:translateY(0);
 
 }
 
+/* ===============================
+   SIGN IN / SIGN UP DESIGN
+================================ */
+
+
+.auth-page{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+    background:
+
+    linear-gradient(
+    rgba(0,0,0,.65),
+    rgba(0,0,0,.65)
+    ),
+
+    url("one.jpg");
+
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+
+
+
+.auth-box{
+
+
+    width:90%;
+
+
+    max-width:430px;
+
+
+    padding:45px;
+
+
+    background:rgba(255,255,255,0.15);
+
+
+    backdrop-filter:blur(15px);
+
+
+    border:1px solid rgba(255,255,255,.3);
+
+
+    border-radius:25px;
+
+
+    color:white;
+
+
+    text-align:center;
+
+
+    animation:loginShow 1s ease;
+
+
+
+}
+
+
+
+
+.auth-box h1{
+
+
+    font-size:35px;
+
+
+    margin-bottom:10px;
+
+
+}
+
+
+
+
+.auth-box p{
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+
+.auth-box input{
+
+
+    width:100%;
+
+
+    padding:15px 20px;
+
+
+    margin:12px 0;
+
+
+    border:none;
+
+
+    outline:none;
+
+
+    border-radius:30px;
+
+
+    font-size:15px;
+
+
+}
+
+
+
+.auth-box input:focus{
+
+
+    box-shadow:0 0 10px #ff6b6b;
+
+
+}
+
+
+
+
+
+.auth-box button{
+
+
+    width:100%;
+
+
+    padding:15px;
+
+
+    margin-top:15px;
+
+
+    border:none;
+
+
+    border-radius:30px;
+
+
+    background:#ff6b6b;
+
+
+    color:white;
+
+
+    font-size:17px;
+
+
+    cursor:pointer;
+
+
+    transition:.4s;
+
+
+}
+
+
+
+
+.auth-box button:hover{
+
+
+    background:#e63946;
+
+
+    transform:scale(1.05);
+
+
+}
+
+
+
+
+
+.auth-box a{
+
+
+    color:#ffd1d1;
+
+
+    text-decoration:none;
+
+
+    font-weight:600;
+
+
+}
+
+
+
+.auth-box a:hover{
+
+
+    color:white;
+
+
+}
+
+
+
+
+
+@keyframes loginShow{
+
+
+from{
+
+
+opacity:0;
+
+
+transform:translateY(70px) scale(.8);
+
+
+}
+
+
+to{
+
+
+opacity:1;
+
+
+transform:translateY(0) scale(1);
+
+
+}
+
+
+}
 
 
 
 
 
 
-/* ================= MOBILE ================= */
+
+
+/* ===============================
+   MOBILE RESPONSIVE
+================================ */
 
 
 @media(max-width:768px){
@@ -918,16 +907,6 @@ transform:translateY(0);
 
 
 
-.nav-links{
-
-
-    display:none;
-
-
-}
-
-
-
 .logo{
 
 
@@ -938,16 +917,27 @@ transform:translateY(0);
 
 
 
+.nav-links{
+
+
+    display:none;
+
+
+}
+
+
+
 .nav-buttons a{
 
 
-    padding:8px;
+    padding:8px 10px;
 
 
     font-size:12px;
 
 
 }
+
 
 
 
@@ -961,13 +951,25 @@ transform:translateY(0);
 
 
 
-.hero h4{
+
+.hero p{
 
 
-    font-size:12px;
+    font-size:15px;
 
 
 }
+
+
+
+.page-banner h1{
+
+
+    font-size:35px;
+
+
+}
+
 
 
 
@@ -981,10 +983,20 @@ transform:translateY(0);
 
 
 
-.page-banner h1{
+.auth-box{
 
 
-    font-size:35px;
+    padding:30px 25px;
+
+
+}
+
+
+
+.auth-box h1{
+
+
+    font-size:28px;
 
 
 }
