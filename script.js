@@ -1,7 +1,6 @@
-/* =================================
-   EPIC JOURNEYS TRAVEL
-   FINAL JAVASCRIPT
-================================= */
+/* =====================================
+   EPIC JOURNEYS PREMIUM JAVASCRIPT
+===================================== */
 
 
 
@@ -10,19 +9,45 @@
 // ===============================
 
 
-const menuIcon = document.querySelector(".menu-icon");
+const menuBtn = document.getElementById("menuBtn");
 
-const navLinks = document.querySelector(".nav-links");
-
-
-
-if(menuIcon && navLinks){
+const navLinks = document.getElementById("navLinks");
 
 
-    menuIcon.addEventListener("click",()=>{
+
+if(menuBtn && navLinks){
+
+
+    menuBtn.addEventListener("click",()=>{
 
 
         navLinks.classList.toggle("active");
+
+
+
+        // icon change
+
+
+        const icon = menuBtn.querySelector("i");
+
+
+        if(navLinks.classList.contains("active")){
+
+
+            icon.classList.remove("fa-bars");
+
+            icon.classList.add("fa-xmark");
+
+
+        }else{
+
+
+            icon.classList.remove("fa-xmark");
+
+            icon.classList.add("fa-bars");
+
+
+        }
 
 
     });
@@ -36,15 +61,13 @@ if(menuIcon && navLinks){
 
 
 
-// Close mobile menu after clicking link
-
-const navItems = document.querySelectorAll(".nav-links a");
+// Close menu after clicking link
 
 
-navItems.forEach(item=>{
+document.querySelectorAll(".nav-links a").forEach(link=>{
 
 
-    item.addEventListener("click",()=>{
+    link.addEventListener("click",()=>{
 
 
         navLinks.classList.remove("active");
@@ -61,12 +84,13 @@ navItems.forEach(item=>{
 
 
 
+
 // ===============================
-// SCROLL ANIMATION
+// SCROLL CARD ANIMATION
 // ===============================
 
 
-const cards = document.querySelectorAll(
+const elements = document.querySelectorAll(
 ".service-card, .offer-banner, .booking-banner"
 );
 
@@ -75,38 +99,32 @@ const cards = document.querySelectorAll(
 const observer = new IntersectionObserver((entries)=>{
 
 
-    entries.forEach(entry=>{
+entries.forEach(entry=>{
 
 
-        if(entry.isIntersecting){
+if(entry.isIntersecting){
 
 
-            entry.target.classList.add("show");
+entry.target.classList.add("show");
 
 
-        }
-
-
-    });
-
-
-},{
-
-
-    threshold:0.2
+}
 
 
 });
 
 
-
-cards.forEach(card=>{
-
-
-    card.classList.add("hidden");
+},{threshold:0.2});
 
 
-    observer.observe(card);
+
+elements.forEach(el=>{
+
+
+el.classList.add("hidden");
+
+
+observer.observe(el);
 
 
 });
@@ -123,29 +141,30 @@ cards.forEach(card=>{
 // ===============================
 
 
-const buttons = document.querySelectorAll("a, button");
+const buttons = document.querySelectorAll("a,button");
 
 
 
-buttons.forEach(button=>{
+buttons.forEach(btn=>{
 
 
-    button.addEventListener("click",()=>{
+btn.addEventListener("click",()=>{
 
 
-        button.style.transform="scale(0.95)";
+btn.style.transform="scale(.95)";
 
 
-        setTimeout(()=>{
+setTimeout(()=>{
 
 
-            button.style.transform="";
+btn.style.transform="";
 
 
-        },150);
+},150);
 
 
-    });
+
+});
 
 
 });
@@ -156,19 +175,19 @@ buttons.forEach(button=>{
 
 
 
+
 // ===============================
-// FOOTER YEAR
+// FOOTER YEAR UPDATE
 // ===============================
 
 
-const footerText=document.querySelector("footer p");
+const footer = document.querySelector("footer p");
 
 
+if(footer){
 
-if(footerText){
 
-
-footerText.innerHTML =
+footer.innerHTML =
 
 "© "+new Date().getFullYear()+
 " Epic Journeys Travel | Developed by Abinesh Sarma | All Rights Reserved";
