@@ -1,6 +1,6 @@
 /* =====================================
    EPIC JOURNEYS CONTACT CSS
-   PREMIUM ANIMATED DESIGN
+   PREMIUM ANIMATED VERSION
 ===================================== */
 
 
@@ -8,69 +8,59 @@
 
 
 *{
-
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
 
 
 body{
 
-background:#f7f7f7;
-
-color:#222;
+    background:#f5f5f5;
+    color:#222;
 
 }
 
 
 
-
-/* ===============================
- NAVBAR
-================================ */
+/* ================= NAVBAR ================= */
 
 
 .navbar{
 
-width:92%;
+    width:92%;
 
-margin:20px auto;
+    margin:20px auto;
 
-padding:15px 25px;
+    padding:15px 25px;
 
+    position:fixed;
 
-position:fixed;
+    top:0;
 
-top:0;
+    left:0;
 
-left:0;
+    right:0;
 
-right:0;
-
-
-z-index:999;
+    z-index:999;
 
 
-display:flex;
+    display:flex;
 
-justify-content:space-between;
+    justify-content:space-between;
 
-align-items:center;
-
-
-background:rgba(255,255,255,.15);
-
-backdrop-filter:blur(15px);
+    align-items:center;
 
 
-border-radius:50px;
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:50px;
 
 
-animation:navShow 1s ease;
-
+    animation:navShow 1s;
 
 }
 
@@ -98,16 +88,15 @@ transform:translateY(0);
 
 
 
-
 .logo{
 
-color:white;
+    color:white;
 
-font-size:28px;
+    font-size:28px;
 
-font-weight:700;
+    font-weight:700;
 
-text-decoration:none;
+    text-decoration:none;
 
 }
 
@@ -115,7 +104,7 @@ text-decoration:none;
 
 .logo i{
 
-color:#ff6b6b;
+    color:#ff6b6b;
 
 }
 
@@ -124,9 +113,9 @@ color:#ff6b6b;
 
 .nav-links{
 
-display:flex;
+    display:flex;
 
-gap:30px;
+    gap:30px;
 
 }
 
@@ -134,37 +123,40 @@ gap:30px;
 
 .nav-links a{
 
-color:white;
+    color:white;
 
-text-decoration:none;
+    text-decoration:none;
 
-transition:.3s;
+    transition:.3s;
 
 }
-
 
 
 .nav-links a:hover{
 
-color:#ff6b6b;
+    color:#ff6b6b;
 
 }
+
+
 
 
 
 .nav-buttons a{
 
-background:#ff6b6b;
+    background:#ff6b6b;
 
-color:white;
+    color:white;
 
-padding:10px 18px;
+    padding:10px 18px;
 
-border-radius:30px;
+    border-radius:30px;
 
-text-decoration:none;
+    text-decoration:none;
 
-margin-left:5px;
+    margin-left:5px;
+
+    font-size:14px;
 
 }
 
@@ -174,72 +166,63 @@ margin-left:5px;
 
 
 
-
-/* ===============================
- HEADER
-================================ */
+/* ================= HEADER ================= */
 
 
 .contact-header{
 
 
-height:65vh;
+    height:65vh;
 
 
-background:
+    background:
+
+    linear-gradient(
+    rgba(0,0,0,.65),
+    rgba(0,0,0,.55)
+    ),
+
+    url("../one.jpg");
 
 
-linear-gradient(
+    background-size:cover;
 
-rgba(0,0,0,.65),
-
-rgba(0,0,0,.55)
-
-),
-
-
-url("../one.jpg");
-
-
-
-background-size:cover;
-
-background-position:center;
+    background-position:center;
 
 
 }
 
 
 
-.banner{
+.hero{
 
 
-height:65vh;
+    height:65vh;
 
 
-display:flex;
+    display:flex;
 
-justify-content:center;
+    justify-content:center;
 
-align-items:center;
-
-flex-direction:column;
+    align-items:center;
 
 
-text-align:center;
+    flex-direction:column;
 
 
-color:white;
+    color:white;
+
+    text-align:center;
 
 
-animation:heroShow 1.2s;
+    animation:hero .9s;
 
 
 }
 
 
 
-@keyframes heroShow{
+@keyframes hero{
 
 
 from{
@@ -264,10 +247,16 @@ transform:scale(1);
 
 
 
-.banner h1{
+.hero h1{
+
+    font-size:55px;
+
+}
 
 
-font-size:55px;
+.hero p{
+
+    font-size:18px;
 
 }
 
@@ -276,27 +265,27 @@ font-size:55px;
 
 
 
-/* ===============================
- CONTACT SECTION
-================================ */
+
+/* ================= CONTACT SECTION ================= */
 
 
 .contact-section{
 
 
-padding:90px 8%;
+    padding:90px 8%;
 
 
-display:grid;
+    display:grid;
 
 
-grid-template-columns:1fr 1fr;
+    grid-template-columns:1fr 1fr;
 
 
-gap:50px;
+    gap:50px;
 
 
 }
+
 
 
 
@@ -305,12 +294,12 @@ gap:50px;
 .map h2{
 
 
-font-size:38px;
+    font-size:38px;
 
-margin-bottom:30px;
-
+    margin-bottom:30px;
 
 }
+
 
 
 
@@ -318,25 +307,25 @@ margin-bottom:30px;
 .contact-card{
 
 
-background:white;
+    background:white;
 
 
-padding:25px;
+    padding:25px;
 
 
-border-radius:20px;
+    border-radius:25px;
 
 
-margin-bottom:20px;
+    margin-bottom:20px;
 
 
-box-shadow:0 15px 35px #ddd;
+    box-shadow:0 15px 35px #ddd;
 
 
-animation:cardShow .8s;
+    transition:.4s;
 
 
-transition:.4s;
+    animation:slide .8s;
 
 
 }
@@ -346,14 +335,14 @@ transition:.4s;
 .contact-card:hover{
 
 
-transform:translateY(-10px);
+    transform:translateY(-10px);
 
 
 }
 
 
 
-@keyframes cardShow{
+@keyframes slide{
 
 
 from{
@@ -363,7 +352,6 @@ opacity:0;
 transform:translateX(-50px);
 
 }
-
 
 to{
 
@@ -381,9 +369,41 @@ transform:translateX(0);
 .contact-card i{
 
 
-font-size:35px;
+    font-size:40px;
 
-color:#ff6b6b;
+
+    color:#ff6b6b;
+
+
+    margin-bottom:10px;
+
+
+}
+
+
+
+.contact-card a{
+
+
+    display:inline-block;
+
+
+    margin-top:10px;
+
+
+    padding:8px 20px;
+
+
+    background:#ff6b6b;
+
+
+    color:white;
+
+
+    border-radius:30px;
+
+
+    text-decoration:none;
 
 
 }
@@ -392,34 +412,35 @@ color:#ff6b6b;
 
 
 
-/* ===============================
- FORM
-================================ */
+
+
+/* ================= FORM ================= */
 
 
 .contact-form{
 
 
-background:white;
+    background:white;
 
 
-padding:40px;
+    padding:40px;
 
 
-border-radius:30px;
+    border-radius:30px;
 
 
-box-shadow:0 15px 40px #ddd;
+    box-shadow:0 15px 40px #ddd;
 
 
-animation:formShow 1s;
+    animation:form .9s;
 
 
 }
 
 
 
-@keyframes formShow{
+
+@keyframes form{
 
 
 from{
@@ -429,7 +450,6 @@ opacity:0;
 transform:translateX(50px);
 
 }
-
 
 to{
 
@@ -449,22 +469,22 @@ input,
 textarea{
 
 
-width:100%;
+    width:100%;
 
 
-padding:15px;
+    padding:15px;
 
 
-margin:12px 0;
+    margin:12px 0;
 
 
-border-radius:15px;
+    border-radius:15px;
 
 
-border:1px solid #ddd;
+    border:1px solid #ddd;
 
 
-outline:none;
+    outline:none;
 
 
 }
@@ -475,10 +495,10 @@ input:focus,
 textarea:focus{
 
 
-border-color:#ff6b6b;
+    border-color:#ff6b6b;
 
 
-box-shadow:0 0 10px #ffcccc;
+    box-shadow:0 0 10px #ffcaca;
 
 
 }
@@ -488,9 +508,9 @@ box-shadow:0 0 10px #ffcccc;
 textarea{
 
 
-height:140px;
+    height:140px;
 
-resize:none;
+    resize:none;
 
 }
 
@@ -499,31 +519,31 @@ resize:none;
 button{
 
 
-width:100%;
+    width:100%;
 
 
-padding:15px;
+    padding:15px;
 
 
-border:none;
+    border:none;
 
 
-background:#ff6b6b;
+    background:#ff6b6b;
 
 
-color:white;
+    color:white;
 
 
-border-radius:30px;
+    border-radius:30px;
 
 
-font-size:16px;
+    font-size:16px;
 
 
-cursor:pointer;
+    cursor:pointer;
 
 
-transition:.4s;
+    transition:.4s;
 
 
 }
@@ -533,10 +553,10 @@ transition:.4s;
 button:hover{
 
 
-background:#111;
+    background:#111;
 
 
-transform:translateY(-5px);
+    transform:translateY(-5px);
 
 
 }
@@ -546,18 +566,16 @@ transform:translateY(-5px);
 
 
 
-/* ===============================
- MAP
-================================ */
+
+/* ================= MAP ================= */
 
 
 .map{
 
 
-padding:50px 8%;
+    padding:60px 8%;
 
-text-align:center;
-
+    text-align:center;
 
 }
 
@@ -566,19 +584,19 @@ text-align:center;
 .map iframe{
 
 
-width:100%;
+    width:100%;
 
 
-height:350px;
+    height:350px;
 
 
-border:0;
+    border:0;
 
 
-border-radius:25px;
+    border-radius:30px;
 
 
-box-shadow:0 15px 35px #ddd;
+    box-shadow:0 15px 35px #ddd;
 
 
 }
@@ -589,23 +607,95 @@ box-shadow:0 15px 35px #ddd;
 
 
 
+/* ================= WHATSAPP ================= */
 
-/* ===============================
- FOOTER
-================================ */
+
+.whatsapp{
+
+
+    position:fixed;
+
+
+    right:25px;
+
+
+    bottom:25px;
+
+
+    width:65px;
+
+
+    height:65px;
+
+
+    border-radius:50%;
+
+
+    background:#25D366;
+
+
+    color:white;
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+    font-size:35px;
+
+
+    text-decoration:none;
+
+
+    z-index:999;
+
+
+    animation:pulse 1.5s infinite;
+
+
+}
+
+
+
+@keyframes pulse{
+
+
+50%{
+
+transform:scale(1.15);
+
+}
+
+
+}
+
+
+
+
+
+
+
+/* ================= FOOTER ================= */
 
 
 footer{
 
 
-background:#111;
-
-color:white;
+    background:#111;
 
 
-text-align:center;
+    color:white;
 
-padding:25px;
+
+    text-align:center;
+
+
+    padding:25px;
 
 
 }
@@ -616,9 +706,7 @@ padding:25px;
 
 
 
-/* ===============================
- MOBILE
-================================ */
+/* ================= MOBILE ================= */
 
 
 @media(max-width:768px){
@@ -626,40 +714,43 @@ padding:25px;
 
 .navbar{
 
-width:95%;
+    width:95%;
 
-padding:12px 15px;
+    padding:12px 15px;
 
 }
+
 
 
 .logo{
 
-font-size:20px;
+    font-size:20px;
 
 }
+
 
 
 .nav-links{
 
-display:none;
+    display:none;
 
 }
+
 
 
 .nav-buttons a{
 
-font-size:11px;
+    font-size:10px;
 
-padding:7px 10px;
+    padding:7px 9px;
 
 }
 
 
 
-.banner h1{
+.hero h1{
 
-font-size:35px;
+    font-size:35px;
 
 }
 
@@ -668,10 +759,10 @@ font-size:35px;
 .contact-section{
 
 
-grid-template-columns:1fr;
+    grid-template-columns:1fr;
 
 
-padding:60px 5%;
+    padding:60px 5%;
 
 
 }
@@ -681,11 +772,22 @@ padding:60px 5%;
 .contact-form{
 
 
-padding:25px;
+    padding:25px;
 
 
 }
 
+
+
+.whatsapp{
+
+    width:55px;
+
+    height:55px;
+
+    font-size:30px;
+
+}
 
 
 }
