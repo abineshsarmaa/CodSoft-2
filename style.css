@@ -9,14 +9,51 @@
 }
 
 
-html{
-    scroll-behavior:smooth;
-}
-
-
 body{
-    background:#f5f5f5;
+
+    background:#f8f8f8;
+
+    color:#333;
+
 }
+
+
+/* ================= HEADER ================= */
+
+
+header{
+
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,.55),
+    rgba(0,0,0,.55)
+    ),
+    url("one.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    animation:bg 12s infinite alternate;
+
+}
+
+
+
+@keyframes bg{
+
+from{
+background-position:left;
+}
+
+to{
+background-position:right;
+}
+
+}
+
 
 
 
@@ -26,21 +63,24 @@ body{
 nav{
 
     width:100%;
+
     padding:20px 8%;
 
     display:flex;
+
     justify-content:space-between;
+
     align-items:center;
-
-    background:rgba(0,0,0,.45);
-
-    backdrop-filter:blur(10px);
 
     position:fixed;
 
     top:0;
 
-    z-index:999;
+    z-index:1000;
+
+    background:rgba(0,0,0,.35);
+
+    backdrop-filter:blur(10px);
 
 }
 
@@ -58,11 +98,20 @@ nav{
 
 
 
+.logo i{
+
+    color:#ff6b6b;
+
+}
+
+
+
+
 .menu{
 
     display:flex;
 
-    gap:25px;
+    gap:30px;
 
 }
 
@@ -73,6 +122,8 @@ nav{
     color:white;
 
     text-decoration:none;
+
+    font-size:16px;
 
     transition:.3s;
 
@@ -88,7 +139,11 @@ nav{
 
 
 
-.account-buttons a{
+
+
+.nav-btn a{
+
+    text-decoration:none;
 
     color:white;
 
@@ -98,9 +153,7 @@ nav{
 
     border-radius:30px;
 
-    text-decoration:none;
-
-    margin-left:5px;
+    margin-left:8px;
 
     transition:.4s;
 
@@ -108,7 +161,7 @@ nav{
 
 
 
-.account-buttons a:hover{
+.nav-btn a:hover{
 
     background:#ff3030;
 
@@ -121,47 +174,8 @@ nav{
 
 
 
-/* ================= HOME HERO ================= */
 
-
-
-header{
-
-    min-height:100vh;
-
-    background:
-
-    linear-gradient(
-    rgba(0,0,0,.55),
-    rgba(0,0,0,.55)
-    ),
-
-    url("one.jpg");
-
-    background-size:cover;
-
-    background-position:center;
-
-    animation:bgmove 12s infinite alternate;
-
-}
-
-
-
-@keyframes bgmove{
-
-from{
-background-position:left;
-}
-
-to{
-background-position:right;
-}
-
-}
-
-
-
+/* ================= HERO ================= */
 
 
 .hero{
@@ -170,11 +184,11 @@ background-position:right;
 
     display:flex;
 
+    flex-direction:column;
+
     justify-content:center;
 
     align-items:center;
-
-    flex-direction:column;
 
     text-align:center;
 
@@ -182,15 +196,17 @@ background-position:right;
 
     padding:20px;
 
-    animation:fade 1.5s;
+    animation:show 1.5s;
 
 }
 
 
 
-.hero span{
+.small-text{
 
     letter-spacing:5px;
+
+    font-size:15px;
 
 }
 
@@ -198,9 +214,11 @@ background-position:right;
 
 .hero h1{
 
-    font-size:60px;
+    font-size:65px;
 
-    margin:20px;
+    line-height:1.2;
+
+    margin:20px 0;
 
 }
 
@@ -210,25 +228,36 @@ background-position:right;
 
     max-width:650px;
 
+    font-size:18px;
+
 }
 
 
 
-.hero-buttons a{
+
+.hero-btn{
+
+    margin-top:35px;
+
+}
+
+
+
+.hero-btn a{
 
     display:inline-block;
 
-    margin:20px 5px;
+    padding:14px 35px;
 
-    padding:14px 30px;
+    margin:10px;
 
     color:white;
+
+    text-decoration:none;
 
     background:#ff6b6b;
 
     border-radius:30px;
-
-    text-decoration:none;
 
     transition:.4s;
 
@@ -236,9 +265,11 @@ background-position:right;
 
 
 
-.hero-buttons a:hover{
+.hero-btn a:hover{
 
-    transform:scale(1.1);
+    transform:translateY(-5px);
+
+    background:#ff3030;
 
 }
 
@@ -247,58 +278,30 @@ background-position:right;
 
 
 
-/* ================= COMMON PAGE ================= */
+/* ================= FEATURES ================= */
 
 
-.page-banner{
+.features{
 
-    height:60vh;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    flex-direction:column;
+    padding:80px 8%;
 
     text-align:center;
 
-    color:white;
+}
 
-    background:
 
-    linear-gradient(
-    rgba(0,0,0,.5),
-    rgba(0,0,0,.5)
-    ),
 
-    url("one.jpg");
+.features h2{
 
-    background-size:cover;
+    font-size:40px;
+
+    margin-bottom:40px;
 
 }
 
 
 
-.page-banner h1{
-
-    font-size:50px;
-
-}
-
-
-
-
-
-/* ================= CARDS ================= */
-
-
-.travel-info,
-.about-content,
-.offers-section{
-
-    padding:80px 8%;
+.feature-box{
 
     display:grid;
 
@@ -311,15 +314,11 @@ background-position:right;
 
 
 
-.info-card,
-.about-box,
-.offer-card{
+.feature-box div{
 
     background:white;
 
-    padding:30px;
-
-    text-align:center;
+    padding:35px;
 
     border-radius:15px;
 
@@ -331,9 +330,7 @@ background-position:right;
 
 
 
-.info-card:hover,
-.about-box:hover,
-.offer-card:hover{
+.feature-box div:hover{
 
     transform:translateY(-15px);
 
@@ -341,18 +338,15 @@ background-position:right;
 
 
 
+.feature-box i{
 
-
-.info-card i,
-.about-box i{
-
-    font-size:40px;
+    font-size:45px;
 
     color:#ff6b6b;
 
+    margin-bottom:15px;
+
 }
-
-
 
 
 
@@ -361,163 +355,17 @@ background-position:right;
 /* ================= OFFER ================= */
 
 
-.offer-card h2{
+.offer-home{
 
-    color:#ff6b6b;
+    margin:40px 8%;
 
-}
+    padding:60px;
 
-
-
-.offer-card a{
-
-    display:inline-block;
-
-    margin-top:20px;
-
-    background:#ff6b6b;
+    text-align:center;
 
     color:white;
-
-    padding:10px 25px;
-
-    border-radius:30px;
-
-    text-decoration:none;
-
-}
-
-
-
-
-
-
-
-/* ================= CONTACT ================= */
-
-
-.contact-section{
-
-    padding:120px 8%;
-
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:40px;
-
-}
-
-
-
-.contact-info,
-.contact-form,
-.booking-box{
-
-    background:white;
-
-    padding:35px;
 
     border-radius:20px;
-
-    box-shadow:0 10px 30px #ddd;
-
-}
-
-
-
-.contact-buttons a{
-
-    display:inline-block;
-
-    margin:10px;
-
-    padding:10px 20px;
-
-    background:#ff6b6b;
-
-    color:white;
-
-    text-decoration:none;
-
-    border-radius:30px;
-
-}
-
-
-
-
-
-input,
-textarea,
-select{
-
-    width:100%;
-
-    padding:14px;
-
-    margin:10px 0;
-
-    border-radius:10px;
-
-    border:1px solid #ddd;
-
-}
-
-
-
-textarea{
-
-    height:120px;
-
-}
-
-
-
-button{
-
-    width:100%;
-
-    padding:14px;
-
-    border:none;
-
-    background:#ff6b6b;
-
-    color:white;
-
-    border-radius:30px;
-
-    cursor:pointer;
-
-    font-size:16px;
-
-}
-
-
-
-button:hover{
-
-    background:crimson;
-
-}
-
-
-
-
-
-/* ================= LOGIN SIGNUP ================= */
-
-
-.auth-page{
-
-    min-height:100vh;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
 
     background:
 
@@ -534,76 +382,59 @@ button:hover{
 
 
 
-.auth-box{
+.offer-home h2{
 
-    width:90%;
+    font-size:40px;
 
-    max-width:420px;
+}
 
-    padding:40px;
 
-    background:rgba(255,255,255,.15);
 
-    backdrop-filter:blur(15px);
+.offer-home a,
+.contact-home a{
 
-    border-radius:20px;
+    display:inline-block;
+
+    margin-top:20px;
+
+    padding:12px 30px;
+
+    background:#ff6b6b;
 
     color:white;
 
+    text-decoration:none;
+
+    border-radius:30px;
+
+}
+
+
+
+
+
+
+/* ================= CONTACT CTA ================= */
+
+
+.contact-home{
+
+    padding:70px 8%;
+
     text-align:center;
 
-    animation:zoom 1s;
+    background:#111;
 
-}
-
-
-
-.auth-logo i{
-
-    font-size:45px;
-
-    color:#ff6b6b;
-
-}
-
-
-
-.input-box{
-
-    position:relative;
-
-}
-
-
-
-.input-box i{
-
-    position:absolute;
-
-    left:15px;
-
-    top:25px;
-
-}
-
-
-
-.input-box input{
-
-    padding-left:45px;
+    color:white;
 
 }
 
 
 
 
+.contact-home h2{
 
-.switch a,
-.back-btn{
-
-    color:#ffb3b3;
-
-    text-decoration:none;
+    font-size:35px;
 
 }
 
@@ -617,7 +448,7 @@ button:hover{
 
 footer{
 
-    background:#111;
+    background:#000;
 
     color:white;
 
@@ -632,10 +463,8 @@ footer{
 
 
 
-/* ================= ANIMATION ================= */
 
-
-@keyframes fade{
+@keyframes show{
 
 from{
 
@@ -657,27 +486,6 @@ transform:translateY(0);
 
 
 
-@keyframes zoom{
-
-from{
-
-transform:scale(.7);
-
-opacity:0;
-
-}
-
-to{
-
-transform:scale(1);
-
-opacity:1;
-
-}
-
-}
-
-
 
 
 
@@ -687,41 +495,64 @@ opacity:1;
 @media(max-width:768px){
 
 
+nav{
+
+    padding:15px;
+
+}
+
+
+
 .menu{
 
-display:none;
+    display:none;
 
 }
 
 
-.account-buttons{
 
-display:none;
+.nav-btn a{
+
+    padding:8px 10px;
+
+    font-size:12px;
 
 }
+
+
+
+.logo{
+
+    font-size:20px;
+
+}
+
 
 
 .hero h1{
 
-font-size:35px;
+    font-size:35px;
 
 }
 
 
 
-.contact-section{
+.small-text{
 
-grid-template-columns:1fr;
+    font-size:12px;
+
+}
+
+
+
+.offer-home{
+
+    margin:20px;
+
+    padding:40px 20px;
 
 }
 
-
-
-.page-banner h1{
-
-font-size:35px;
-
-}
 
 
 }
