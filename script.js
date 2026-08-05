@@ -3,52 +3,27 @@
 // ===============================
 
 
-const menuBtn = document.getElementById("menu-btn");
-const menu = document.getElementById("menu");
+const menuIcon = document.getElementById("menuIcon");
+
+const navLinks = document.querySelector(".nav-links");
 
 
-if(menuBtn && menu){
+
+if(menuIcon){
 
 
-    menuBtn.addEventListener("click",()=>{
+menuIcon.addEventListener("click",()=>{
 
 
-        menu.classList.toggle("active");
+navLinks.classList.toggle("active");
 
 
-    });
+});
 
 
 }
 
 
-
-
-// ===============================
-// Close Menu After Click
-// ===============================
-
-
-const links = document.querySelectorAll(".menu a");
-
-
-links.forEach(link=>{
-
-
-    link.addEventListener("click",()=>{
-
-
-        if(menu){
-
-            menu.classList.remove("active");
-
-        }
-
-
-    });
-
-
-});
 
 
 
@@ -59,7 +34,7 @@ links.forEach(link=>{
 
 
 const cards = document.querySelectorAll(
-".info-card, .about-box, .offer-card"
+".service-card, .about-card, .offer-card, .contact-card"
 );
 
 
@@ -67,41 +42,32 @@ const cards = document.querySelectorAll(
 const observer = new IntersectionObserver((entries)=>{
 
 
-    entries.forEach(entry=>{
+entries.forEach(entry=>{
 
 
-        if(entry.isIntersecting){
+if(entry.isIntersecting){
 
 
-            entry.target.style.opacity="1";
-
-            entry.target.style.transform="translateY(0)";
+entry.target.classList.add("show");
 
 
-        }
-
-
-    });
-
+}
 
 
 });
 
 
+});
 
 
 
 cards.forEach(card=>{
 
 
-    card.style.opacity="0";
-
-    card.style.transform="translateY(50px)";
-
-    card.style.transition="0.8s";
+card.classList.add("hidden");
 
 
-    observer.observe(card);
+observer.observe(card);
 
 
 });
@@ -110,26 +76,61 @@ cards.forEach(card=>{
 
 
 
+
+
 // ===============================
-// Form Submit Message
+// Booking Form Message
 // ===============================
 
 
 const forms = document.querySelectorAll("form");
 
 
+
 forms.forEach(form=>{
 
 
-    form.addEventListener("submit",function(){
+form.addEventListener("submit",(e)=>{
 
 
-        alert(
-        "Thank you! Your request has been submitted."
-        );
+e.preventDefault();
 
 
-    });
+alert(
+"Thank you! Your request has been submitted successfully."
+);
+
+
+form.reset();
 
 
 });
+
+
+});
+
+
+
+
+
+
+// ===============================
+// Current Year Footer
+// ===============================
+
+
+const year = new Date().getFullYear();
+
+
+const footerText = document.querySelector("footer p");
+
+
+if(footerText){
+
+
+footerText.innerHTML =
+"© "+year+
+" Epic Journeys Travel | Developed by Abinesh Sarma | All Rights Reserved";
+
+
+}
