@@ -1,46 +1,38 @@
+// ===============================
 // Mobile Menu Toggle
+// ===============================
+
 
 const menuBtn = document.getElementById("menu-btn");
 const menu = document.getElementById("menu");
 
 
-if(menuBtn){
+if(menuBtn && menu){
+
 
     menuBtn.addEventListener("click",()=>{
+
 
         menu.classList.toggle("active");
 
 
-        const icon = menuBtn.querySelector("i");
-
-
-        if(menu.classList.contains("active")){
-
-            icon.classList.remove("fa-bars");
-            icon.classList.add("fa-xmark");
-
-        }
-        else{
-
-            icon.classList.remove("fa-xmark");
-            icon.classList.add("fa-bars");
-
-        }
-
-
     });
+
 
 }
 
 
 
 
-// Close mobile menu after clicking link
+// ===============================
+// Close Menu After Click
+// ===============================
 
-const menuLinks = document.querySelectorAll(".menu a");
+
+const links = document.querySelectorAll(".menu a");
 
 
-menuLinks.forEach(link=>{
+links.forEach(link=>{
 
 
     link.addEventListener("click",()=>{
@@ -61,7 +53,67 @@ menuLinks.forEach(link=>{
 
 
 
-// Simple form message
+// ===============================
+// Scroll Animation
+// ===============================
+
+
+const cards = document.querySelectorAll(
+".info-card, .about-box, .offer-card"
+);
+
+
+
+const observer = new IntersectionObserver((entries)=>{
+
+
+    entries.forEach(entry=>{
+
+
+        if(entry.isIntersecting){
+
+
+            entry.target.style.opacity="1";
+
+            entry.target.style.transform="translateY(0)";
+
+
+        }
+
+
+    });
+
+
+
+});
+
+
+
+
+
+cards.forEach(card=>{
+
+
+    card.style.opacity="0";
+
+    card.style.transform="translateY(50px)";
+
+    card.style.transition="0.8s";
+
+
+    observer.observe(card);
+
+
+});
+
+
+
+
+
+// ===============================
+// Form Submit Message
+// ===============================
+
 
 const forms = document.querySelectorAll("form");
 
@@ -69,10 +121,12 @@ const forms = document.querySelectorAll("form");
 forms.forEach(form=>{
 
 
-    form.addEventListener("submit",(e)=>{
+    form.addEventListener("submit",function(){
 
 
-        alert("Thank you! Your request has been submitted.");
+        alert(
+        "Thank you! Your request has been submitted."
+        );
 
 
     });
