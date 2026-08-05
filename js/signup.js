@@ -1,0 +1,180 @@
+/* =====================================
+   EPIC JOURNEYS SIGNUP JAVASCRIPT
+===================================== */
+
+
+
+// ===============================
+// SHOW / HIDE PASSWORD
+// ===============================
+
+
+const password = document.getElementById("password");
+
+const showPassword = document.getElementById("showPassword");
+
+
+
+if(showPassword){
+
+
+showPassword.addEventListener("click",()=>{
+
+
+if(password.type === "password"){
+
+
+password.type="text";
+
+
+showPassword.classList.remove("fa-eye");
+
+
+showPassword.classList.add("fa-eye-slash");
+
+
+
+}
+
+else{
+
+
+password.type="password";
+
+
+showPassword.classList.remove("fa-eye-slash");
+
+
+showPassword.classList.add("fa-eye");
+
+
+}
+
+
+
+});
+
+
+}
+
+
+
+
+
+
+
+
+// ===============================
+// CREATE ACCOUNT FORM
+// ===============================
+
+
+const signupForm=document.querySelector("form");
+
+
+
+if(signupForm){
+
+
+signupForm.addEventListener("submit",(e)=>{
+
+
+e.preventDefault();
+
+
+
+showMessage(
+"🎉 Account created successfully! Welcome to Epic Journeys."
+);
+
+
+
+signupForm.reset();
+
+
+
+});
+
+
+}
+
+
+
+
+
+
+
+
+// ===============================
+// MESSAGE POPUP
+// ===============================
+
+
+function showMessage(text){
+
+
+const message=document.createElement("div");
+
+
+message.className="signup-message";
+
+
+message.innerHTML=text;
+
+
+
+document.body.appendChild(message);
+
+
+
+setTimeout(()=>{
+
+
+message.remove();
+
+
+},3000);
+
+
+
+}
+
+
+
+
+
+
+
+// ===============================
+// BUTTON EFFECT
+// ===============================
+
+
+const button=document.querySelector("button");
+
+
+
+if(button){
+
+
+button.addEventListener("click",()=>{
+
+
+button.style.transform="scale(.95)";
+
+
+
+setTimeout(()=>{
+
+
+button.style.transform="";
+
+
+},150);
+
+
+
+});
+
+
+}
