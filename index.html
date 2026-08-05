@@ -7,7 +7,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Epic Journeys Travel</title>
+<title>Epic Journeys | Travel</title>
 
 
 <link rel="stylesheet" href="css/home.css">
@@ -23,6 +23,27 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
 <body>
 
 
+<!-- Loader -->
+
+<div class="loader">
+
+<i class="fa-solid fa-plane"></i>
+
+<h2>Epic Journeys</h2>
+
+<p>Loading Adventure...</p>
+
+</div>
+
+
+
+
+
+
+
+<!-- Navbar -->
+
+
 <header class="home-header">
 
 
@@ -33,7 +54,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
 
 <i class="fa-solid fa-plane"></i>
 
-<span>Epic Journeys</span>
+Epic Journeys
 
 </a>
 
@@ -59,24 +80,36 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
 
 
 
+
 <div class="nav-actions">
 
 
-<a class="signin-btn" href="signin.html">
+<a href="signin.html">
 Sign In
 </a>
 
 
-<a class="signup-btn" href="signup.html">
+<a href="signup.html">
 Create Account
 </a>
 
 
-<button class="menu-icon" id="menuBtn">
+
+<button id="themeBtn">
+
+<i class="fa-solid fa-moon"></i>
+
+</button>
+
+
+
+
+<button id="menuBtn">
 
 <i class="fa-solid fa-bars"></i>
 
 </button>
+
 
 
 </div>
@@ -92,6 +125,8 @@ Create Account
 
 
 
+<!-- Hero -->
+
 
 <section class="hero">
 
@@ -99,29 +134,31 @@ Create Account
 <div class="hero-content">
 
 
-<p class="welcome">
-WELCOME TO EPIC JOURNEYS TRAVEL
-</p>
+<h4>
+WELCOME TO EPIC JOURNEYS
+</h4>
 
 
 
 <h1>
+
 Explore The World
+
 <br>
+
 Create Beautiful Memories
+
 </h1>
 
 
 
+<p>
 
-<p class="description">
-
-Discover amazing destinations,
-comfortable stays and unforgettable
+Discover beautiful destinations,
+luxury stays and unforgettable
 travel experiences.
 
 </p>
-
 
 
 
@@ -136,7 +173,6 @@ travel experiences.
 Book Now
 
 </a>
-
 
 
 
@@ -166,6 +202,10 @@ View Offers
 
 
 
+
+<!-- Services -->
+
+
 <section class="services">
 
 
@@ -175,24 +215,21 @@ Why Choose Us?
 
 
 
-<div class="service-container">
+<div class="service-box">
 
 
-<div class="service-card">
 
+<div class="card">
 
 <i class="fa-solid fa-plane"></i>
 
-
 <h3>
-Best Travel Packages
+Best Packages
 </h3>
 
-
 <p>
-Affordable and memorable journeys.
+Affordable travel packages.
 </p>
-
 
 </div>
 
@@ -200,21 +237,17 @@ Affordable and memorable journeys.
 
 
 
-<div class="service-card">
-
+<div class="card">
 
 <i class="fa-solid fa-hotel"></i>
 
-
 <h3>
-Comfort Stay
+Luxury Stay
 </h3>
 
-
 <p>
-Safe and luxury hotels.
+Comfortable hotels.
 </p>
-
 
 </div>
 
@@ -222,25 +255,19 @@ Safe and luxury hotels.
 
 
 
-
-<div class="service-card">
-
+<div class="card">
 
 <i class="fa-solid fa-headset"></i>
-
 
 <h3>
 24/7 Support
 </h3>
 
-
 <p>
-Always available for help.
+Always available.
 </p>
 
-
 </div>
-
 
 
 </div>
@@ -255,22 +282,30 @@ Always available for help.
 
 
 
-<section class="offer-banner">
+
+
+<!-- Gallery -->
+
+
+<section class="gallery">
 
 
 <h2>
-Special Travel Offers
+Popular Destinations
 </h2>
 
 
-<p>
-Get amazing discounts on your dream trip.
-</p>
+<div class="gallery-box">
 
 
-<a href="offers.html">
-Explore Offers
-</a>
+<img src="one.jpg">
+
+<img src="one.jpg">
+
+<img src="one.jpg">
+
+
+</div>
 
 
 </section>
@@ -280,6 +315,95 @@ Explore Offers
 
 
 
+
+
+
+
+<!-- Reviews -->
+
+
+<section class="reviews">
+
+
+<h2>
+Customer Reviews
+</h2>
+
+
+
+<div class="review-box">
+
+
+<div class="review">
+
+
+⭐⭐⭐⭐⭐
+
+<p>
+Amazing travel experience.
+</p>
+
+<h3>
+Rahul
+</h3>
+
+</div>
+
+
+
+
+
+<div class="review">
+
+
+⭐⭐⭐⭐⭐
+
+<p>
+Very comfortable journey.
+</p>
+
+<h3>
+Priya
+</h3>
+
+
+</div>
+
+
+
+
+
+<div class="review">
+
+
+⭐⭐⭐⭐⭐
+
+<p>
+Best service and support.
+</p>
+
+<h3>
+Amit
+</h3>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- Booking Banner -->
 
 
 <section class="booking-banner">
@@ -291,7 +415,7 @@ Ready For Your Next Adventure?
 
 
 <p>
-Book your journey with Epic Journeys today.
+Book your dream journey today.
 </p>
 
 
@@ -309,15 +433,28 @@ Start Booking
 
 
 
+
+<!-- WhatsApp -->
+
+
+<a class="whatsapp"
+href="https://wa.me/">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+
+
+
+
+
+
 <footer>
 
 
 <p>
-
-© 2026 Epic Journeys Travel |
-Developed by Abinesh Sarma |
-All Rights Reserved
-
+© 2026 Epic Journeys Travel | Developed by Abinesh Sarma
 </p>
 
 
@@ -327,7 +464,8 @@ All Rights Reserved
 
 
 
-<script src="js/script.js"></script>
+
+<script src="js/home.js"></script>
 
 
 </body>
