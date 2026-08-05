@@ -1,5 +1,6 @@
 /* =====================================
    EPIC JOURNEYS HOME JAVASCRIPT
+   PREMIUM VERSION
 ===================================== */
 
 
@@ -11,26 +12,31 @@
 
 window.addEventListener("load",()=>{
 
-    const loader = document.querySelector(".loader");
 
-    if(loader){
-
-        setTimeout(()=>{
-
-            loader.style.opacity="0";
-
-            setTimeout(()=>{
-
-                loader.style.display="none";
-
-            },500);
+const loader=document.querySelector(".loader");
 
 
-        },1000);
 
-    }
+if(loader){
+
+
+setTimeout(()=>{
+
+
+loader.style.display="none";
+
+
+},1800);
+
+
+}
+
+
 
 });
+
+
+
 
 
 
@@ -42,41 +48,48 @@ window.addEventListener("load",()=>{
 // ===============================
 
 
-const menuBtn = document.getElementById("menuBtn");
+const menuBtn=document.getElementById("menuBtn");
 
-const navLinks = document.getElementById("navLinks");
+const navLinks=document.getElementById("navLinks");
 
 
 
-if(menuBtn && navLinks){
+if(menuBtn){
 
 
 menuBtn.addEventListener("click",()=>{
 
 
-    navLinks.classList.toggle("active");
+navLinks.classList.toggle("active");
 
 
-    const icon = menuBtn.querySelector("i");
+
+const icon=menuBtn.querySelector("i");
 
 
-    if(navLinks.classList.contains("active")){
+
+if(navLinks.classList.contains("active")){
 
 
-        icon.classList.remove("fa-bars");
-
-        icon.classList.add("fa-xmark");
+icon.classList.remove("fa-bars");
 
 
-    }else{
+icon.classList.add("fa-xmark");
 
 
-        icon.classList.remove("fa-xmark");
+}
 
-        icon.classList.add("fa-bars");
+else{
 
 
-    }
+icon.classList.remove("fa-xmark");
+
+
+icon.classList.add("fa-bars");
+
+
+}
+
 
 
 });
@@ -84,31 +97,6 @@ menuBtn.addEventListener("click",()=>{
 
 }
 
-
-
-
-
-
-// Close mobile menu after click
-
-
-document.querySelectorAll(".nav-links a").forEach(link=>{
-
-
-    link.addEventListener("click",()=>{
-
-
-        if(navLinks){
-
-            navLinks.classList.remove("active");
-
-        }
-
-
-    });
-
-
-});
 
 
 
@@ -121,7 +109,7 @@ document.querySelectorAll(".nav-links a").forEach(link=>{
 // ===============================
 
 
-const themeBtn = document.getElementById("themeBtn");
+const themeBtn=document.getElementById("themeBtn");
 
 
 
@@ -131,79 +119,32 @@ if(themeBtn){
 themeBtn.addEventListener("click",()=>{
 
 
-    document.body.classList.toggle("dark-mode");
-
-
-    const icon = themeBtn.querySelector("i");
+document.body.classList.toggle("dark");
 
 
 
-    if(document.body.classList.contains("dark-mode")){
-
-
-        icon.classList.remove("fa-moon");
-
-        icon.classList.add("fa-sun");
-
-
-        localStorage.setItem("theme","dark");
+const icon=themeBtn.querySelector("i");
 
 
 
-    }else{
+if(document.body.classList.contains("dark")){
 
-
-        icon.classList.remove("fa-sun");
-
-        icon.classList.add("fa-moon");
-
-
-        localStorage.setItem("theme","light");
-
-
-    }
-
-
-
-});
-
-
-}
-
-
-
-
-
-
-
-// Remember Theme
-
-
-window.addEventListener("load",()=>{
-
-
-const savedTheme = localStorage.getItem("theme");
-
-
-
-const icon = document.querySelector("#themeBtn i");
-
-
-
-if(savedTheme==="dark"){
-
-
-document.body.classList.add("dark-mode");
-
-
-
-if(icon){
 
 icon.classList.remove("fa-moon");
 
+
 icon.classList.add("fa-sun");
 
+
 }
+
+else{
+
+
+icon.classList.remove("fa-sun");
+
+
+icon.classList.add("fa-moon");
 
 
 }
@@ -211,6 +152,10 @@ icon.classList.add("fa-sun");
 
 
 });
+
+
+}
+
 
 
 
@@ -224,27 +169,31 @@ icon.classList.add("fa-sun");
 // ===============================
 
 
-const animatedItems = document.querySelectorAll(
+const cards=document.querySelectorAll(
 
-".card, .review, .gallery-box img, .booking-banner"
+".card,.review,.gallery-box img"
 
 );
 
 
 
-const observer = new IntersectionObserver((entries)=>{
+const observer=new IntersectionObserver((entries)=>{
 
 
 entries.forEach(entry=>{
 
 
-    if(entry.isIntersecting){
+if(entry.isIntersecting){
 
 
-        entry.target.classList.add("show");
+entry.target.style.opacity="1";
 
 
-    }
+entry.target.style.transform="translateY(0)";
+
+
+}
+
 
 
 });
@@ -253,23 +202,34 @@ entries.forEach(entry=>{
 },{
 
 
-threshold:0.2
+threshold:.2
 
 
 });
 
 
 
-animatedItems.forEach(item=>{
 
 
-    item.classList.add("hidden");
+cards.forEach(card=>{
 
 
-    observer.observe(item);
+card.style.opacity="0";
+
+
+card.style.transform="translateY(50px)";
+
+
+card.style.transition="0.8s ease";
+
+
+
+observer.observe(card);
 
 
 });
+
+
 
 
 
@@ -282,26 +242,28 @@ animatedItems.forEach(item=>{
 // ===============================
 
 
-const buttons = document.querySelectorAll("a,button");
+const buttons=document.querySelectorAll("a,button");
 
 
 
-buttons.forEach(button=>{
+buttons.forEach(btn=>{
 
 
-button.addEventListener("click",()=>{
+btn.addEventListener("click",()=>{
 
 
-    button.style.transform="scale(.95)";
+btn.style.transform="scale(.95)";
 
 
-    setTimeout(()=>{
+
+setTimeout(()=>{
 
 
-        button.style.transform="";
+btn.style.transform="";
 
 
-    },150);
+},150);
+
 
 
 });
@@ -315,21 +277,23 @@ button.addEventListener("click",()=>{
 
 
 
+
+
 // ===============================
-// FOOTER YEAR UPDATE
+// FOOTER YEAR
 // ===============================
 
 
-const footer = document.querySelector("footer p");
+const footer=document.querySelector("footer p");
 
 
 
 if(footer){
 
 
-footer.innerHTML =
+footer.innerHTML=
 
-"© " + new Date().getFullYear() +
+"© "+new Date().getFullYear()+
 
 " Epic Journeys Travel | Developed by Abinesh Sarma";
 
