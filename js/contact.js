@@ -5,17 +5,139 @@
 
 
 // ===============================
-// SCROLL ANIMATION
+// FORM SUBMIT MESSAGE
 // ===============================
 
 
-const animatedItems = document.querySelectorAll(
-".contact-card, .contact-form, .map"
+const contactForm = document.querySelector("form");
+
+
+
+if(contactForm){
+
+
+contactForm.addEventListener("submit",(e)=>{
+
+
+e.preventDefault();
+
+
+
+createMessage(
+"✅ Thank you! Your message has been sent successfully."
 );
 
 
 
-const observer = new IntersectionObserver((entries)=>{
+contactForm.reset();
+
+
+
+});
+
+
+}
+
+
+
+
+
+
+
+// ===============================
+// SUCCESS MESSAGE BOX
+// ===============================
+
+
+function createMessage(text){
+
+
+const message = document.createElement("div");
+
+
+message.className="success-message";
+
+
+message.innerHTML=text;
+
+
+
+document.body.appendChild(message);
+
+
+
+
+setTimeout(()=>{
+
+
+message.remove();
+
+
+},3000);
+
+
+
+}
+
+
+
+
+
+
+
+
+// ===============================
+// BUTTON ANIMATION
+// ===============================
+
+
+const buttons=document.querySelectorAll("a,button");
+
+
+
+buttons.forEach(btn=>{
+
+
+btn.addEventListener("click",()=>{
+
+
+btn.style.transform="scale(.95)";
+
+
+setTimeout(()=>{
+
+
+btn.style.transform="";
+
+
+},150);
+
+
+
+});
+
+
+});
+
+
+
+
+
+
+
+
+// ===============================
+// SCROLL REVEAL ANIMATION
+// ===============================
+
+
+const elements=document.querySelectorAll(
+".contact-card,.contact-form,.map"
+);
+
+
+
+const observer=new IntersectionObserver((entries)=>{
 
 
 entries.forEach(entry=>{
@@ -41,150 +163,25 @@ threshold:0.2
 
 
 
+elements.forEach(element=>{
 
 
-animatedItems.forEach(item=>{
+element.classList.add("hidden");
 
 
-item.classList.add("hidden");
-
-
-observer.observe(item);
-
-
-});
-
-
-
-
-
-
-
-// ===============================
-// FORM SUBMIT
-// ===============================
-
-
-const form = document.querySelector("form");
-
-
-
-if(form){
-
-
-form.addEventListener("submit",(e)=>{
-
-
-e.preventDefault();
-
-
-
-showMessage(
-"✓ Thank you! Your message has been sent successfully."
-);
-
-
-
-form.reset();
-
+observer.observe(element);
 
 
 });
 
 
-}
-
-
-
-
-
-
-
-
-// ===============================
-// CUSTOM MESSAGE
-// ===============================
-
-
-function showMessage(text){
-
-
-const msg=document.createElement("div");
-
-
-msg.className="message-box";
-
-
-msg.innerHTML=text;
-
-
-
-document.body.appendChild(msg);
-
-
-
-setTimeout(()=>{
-
-
-msg.remove();
-
-
-},3000);
-
-
-
-}
-
-
-
 
 
 
 
 
 // ===============================
-// BUTTON EFFECT
-// ===============================
-
-
-const buttons=document.querySelectorAll("a,button");
-
-
-
-buttons.forEach(button=>{
-
-
-button.addEventListener("click",()=>{
-
-
-button.style.transform="scale(.95)";
-
-
-
-setTimeout(()=>{
-
-
-button.style.transform="";
-
-
-},150);
-
-
-
-});
-
-
-});
-
-
-
-
-
-
-
-
-// ===============================
-// FOOTER YEAR
+// FOOTER YEAR UPDATE
 // ===============================
 
 
@@ -195,7 +192,7 @@ const footer=document.querySelector("footer p");
 if(footer){
 
 
-footer.innerHTML =
+footer.innerHTML=
 
 "© "+new Date().getFullYear()+
 " Epic Journeys Travel | Developed by Abinesh Sarma";
