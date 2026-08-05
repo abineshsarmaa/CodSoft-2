@@ -16,8 +16,13 @@ window.addEventListener("load",()=>{
 const loader=document.querySelector(".loader");
 
 
-
 if(loader){
+
+
+setTimeout(()=>{
+
+
+loader.style.opacity="0";
 
 
 setTimeout(()=>{
@@ -26,16 +31,17 @@ setTimeout(()=>{
 loader.style.display="none";
 
 
-},1800);
+},500);
+
+
+
+},1200);
 
 
 }
 
 
-
 });
-
-
 
 
 
@@ -54,7 +60,7 @@ const navLinks=document.getElementById("navLinks");
 
 
 
-if(menuBtn){
+if(menuBtn && navLinks){
 
 
 menuBtn.addEventListener("click",()=>{
@@ -96,6 +102,7 @@ icon.classList.add("fa-bars");
 
 
 }
+
 
 
 
@@ -169,7 +176,7 @@ icon.classList.add("fa-moon");
 // ===============================
 
 
-const cards=document.querySelectorAll(
+const animationItems=document.querySelectorAll(
 
 ".card,.review,.gallery-box img"
 
@@ -180,16 +187,13 @@ const cards=document.querySelectorAll(
 const observer=new IntersectionObserver((entries)=>{
 
 
-entries.forEach(entry=>{
+entries.forEach((entry)=>{
 
 
 if(entry.isIntersecting){
 
 
-entry.target.style.opacity="1";
-
-
-entry.target.style.transform="translateY(0)";
+entry.target.classList.add("show");
 
 
 }
@@ -202,7 +206,7 @@ entry.target.style.transform="translateY(0)";
 },{
 
 
-threshold:.2
+threshold:0.2
 
 
 });
@@ -211,20 +215,14 @@ threshold:.2
 
 
 
-cards.forEach(card=>{
+
+animationItems.forEach(item=>{
 
 
-card.style.opacity="0";
+item.classList.add("hidden");
 
 
-card.style.transform="translateY(50px)";
-
-
-card.style.transition="0.8s ease";
-
-
-
-observer.observe(card);
+observer.observe(item);
 
 
 });
@@ -246,24 +244,64 @@ const buttons=document.querySelectorAll("a,button");
 
 
 
-buttons.forEach(btn=>{
+buttons.forEach(button=>{
 
 
-btn.addEventListener("click",()=>{
+button.addEventListener("click",()=>{
 
 
-btn.style.transform="scale(.95)";
+button.style.transform="scale(.95)";
 
 
 
 setTimeout(()=>{
 
 
-btn.style.transform="";
+button.style.transform="";
 
 
 },150);
 
+
+
+});
+
+
+});
+
+
+
+
+
+
+
+
+
+// ===============================
+// CLOSE MOBILE MENU AFTER CLICK
+// ===============================
+
+
+const menuLinks=document.querySelectorAll(".nav-links a");
+
+
+
+menuLinks.forEach(link=>{
+
+
+link.addEventListener("click",()=>{
+
+
+navLinks.classList.remove("active");
+
+
+const icon=menuBtn.querySelector("i");
+
+
+icon.classList.remove("fa-xmark");
+
+
+icon.classList.add("fa-bars");
 
 
 });
