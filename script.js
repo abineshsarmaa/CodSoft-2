@@ -1,25 +1,26 @@
+/* =================================
+   EPIC JOURNEYS TRAVEL JS
+================================= */
+
+
+
 // ===============================
-// Mobile Menu Toggle
+// Mobile Menu
 // ===============================
 
 
-const menuIcon = document.getElementById("menuIcon");
+const menuBtn = document.querySelector(".menu-icon");
 
-const navLinks = document.querySelector(".nav-links");
-
-
-
-if(menuIcon){
+const navMenu = document.querySelector(".nav-links");
 
 
-menuIcon.addEventListener("click",()=>{
+if(menuBtn){
 
+    menuBtn.addEventListener("click",()=>{
 
-navLinks.classList.toggle("active");
+        navMenu.classList.toggle("active");
 
-
-});
-
+    });
 
 }
 
@@ -33,41 +34,45 @@ navLinks.classList.toggle("active");
 // ===============================
 
 
-const cards = document.querySelectorAll(
+const animatedCards = document.querySelectorAll(
 ".service-card, .about-card, .offer-card, .contact-card"
 );
 
 
 
-const observer = new IntersectionObserver((entries)=>{
+const observer = new IntersectionObserver((items)=>{
 
 
-entries.forEach(entry=>{
+    items.forEach(item=>{
 
 
-if(entry.isIntersecting){
+        if(item.isIntersecting){
+
+            item.target.classList.add("show");
+
+        }
 
 
-entry.target.classList.add("show");
+    });
 
 
-}
+},{
+
+
+threshold:0.2
 
 
 });
 
 
-});
+
+animatedCards.forEach(card=>{
 
 
-
-cards.forEach(card=>{
-
-
-card.classList.add("hidden");
+    card.classList.add("hidden");
 
 
-observer.observe(card);
+    observer.observe(card);
 
 
 });
@@ -79,7 +84,7 @@ observer.observe(card);
 
 
 // ===============================
-// Booking Form Message
+// Booking / Contact Form
 // ===============================
 
 
@@ -96,14 +101,56 @@ form.addEventListener("submit",(e)=>{
 e.preventDefault();
 
 
+
 alert(
-"Thank you! Your request has been submitted successfully."
+"Thank you! Your information has been submitted successfully."
 );
+
 
 
 form.reset();
 
 
+
+});
+
+
+});
+
+
+
+
+
+
+
+// ===============================
+// Button Click Animation
+// ===============================
+
+
+const buttons = document.querySelectorAll("a,button");
+
+
+
+buttons.forEach(btn=>{
+
+
+btn.addEventListener("click",()=>{
+
+
+btn.style.transform="scale(0.95)";
+
+
+setTimeout(()=>{
+
+
+btn.style.transform="";
+
+
+},150);
+
+
+
 });
 
 
@@ -114,22 +161,23 @@ form.reset();
 
 
 
+
+
 // ===============================
-// Current Year Footer
+// Footer Year Update
 // ===============================
 
 
-const year = new Date().getFullYear();
+const footer = document.querySelector("footer p");
 
 
-const footerText = document.querySelector("footer p");
+
+if(footer){
 
 
-if(footerText){
+footer.innerHTML =
 
-
-footerText.innerHTML =
-"© "+year+
+"© "+new Date().getFullYear()+
 " Epic Journeys Travel | Developed by Abinesh Sarma | All Rights Reserved";
 
 
