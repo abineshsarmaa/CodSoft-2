@@ -9,70 +9,38 @@
 }
 
 
+html{
+    scroll-behavior:smooth;
+}
+
+
 body{
     background:#f5f5f5;
 }
 
 
 
-/* HOME BACKGROUND */
+/* ================= NAVBAR ================= */
 
-header{
-
-    min-height:100vh;
-
-    background:
-    linear-gradient(
-    rgba(0,0,0,.55),
-    rgba(0,0,0,.55)
-    ),
-    url("one.jpg");
-
-    background-size:cover;
-    background-position:center;
-
-    animation:bgMove 12s infinite alternate;
-
-}
-
-
-
-@keyframes bgMove{
-
-    from{
-        background-position:left center;
-    }
-
-    to{
-        background-position:right center;
-    }
-
-}
-
-
-
-
-/* NAVBAR */
 
 nav{
 
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
+    width:100%;
     padding:20px 8%;
 
-    position:fixed;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 
-    width:100%;
-
-    background:rgba(0,0,0,.3);
+    background:rgba(0,0,0,.45);
 
     backdrop-filter:blur(10px);
 
-    z-index:1000;
+    position:fixed;
+
+    top:0;
+
+    z-index:999;
 
 }
 
@@ -82,11 +50,9 @@ nav{
 
     color:white;
 
-    font-size:30px;
+    font-size:28px;
 
     font-weight:700;
-
-    animation:slideLeft 1s;
 
 }
 
@@ -108,7 +74,7 @@ nav{
 
     text-decoration:none;
 
-    transition:.4s;
+    transition:.3s;
 
 }
 
@@ -118,26 +84,23 @@ nav{
 
     color:#ff6b6b;
 
-    transform:scale(1.1);
-
 }
-
 
 
 
 .account-buttons a{
 
-    background:#ff6b6b;
-
     color:white;
+
+    background:#ff6b6b;
 
     padding:10px 18px;
 
-    margin:5px;
+    border-radius:30px;
 
     text-decoration:none;
 
-    border-radius:30px;
+    margin-left:5px;
 
     transition:.4s;
 
@@ -147,16 +110,58 @@ nav{
 
 .account-buttons a:hover{
 
-    transform:scale(1.1);
+    background:#ff3030;
 
-    background:crimson;
+    transform:scale(1.1);
 
 }
 
 
 
 
-/* HERO ANIMATION */
+
+
+/* ================= HOME HERO ================= */
+
+
+
+header{
+
+    min-height:100vh;
+
+    background:
+
+    linear-gradient(
+    rgba(0,0,0,.55),
+    rgba(0,0,0,.55)
+    ),
+
+    url("one.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    animation:bgmove 12s infinite alternate;
+
+}
+
+
+
+@keyframes bgmove{
+
+from{
+background-position:left;
+}
+
+to{
+background-position:right;
+}
+
+}
+
+
+
 
 
 .hero{
@@ -175,17 +180,9 @@ nav{
 
     color:white;
 
-    animation:fadeUp 1.5s;
+    padding:20px;
 
-}
-
-
-
-.hero h1{
-
-    font-size:60px;
-
-    animation:zoom 1.5s;
+    animation:fade 1.5s;
 
 }
 
@@ -199,19 +196,39 @@ nav{
 
 
 
-.hero a{
+.hero h1{
 
-    margin-top:30px;
+    font-size:60px;
 
-    padding:15px 35px;
+    margin:20px;
 
-    background:#ff6b6b;
+}
+
+
+
+.hero p{
+
+    max-width:650px;
+
+}
+
+
+
+.hero-buttons a{
+
+    display:inline-block;
+
+    margin:20px 5px;
+
+    padding:14px 30px;
 
     color:white;
 
-    text-decoration:none;
+    background:#ff6b6b;
 
     border-radius:30px;
+
+    text-decoration:none;
 
     transition:.4s;
 
@@ -219,48 +236,7 @@ nav{
 
 
 
-.hero a:hover{
-
-    transform:scale(1.15);
-
-}
-
-
-
-
-
-
-/* CARDS */
-
-
-.card{
-
-    transition:.5s;
-
-}
-
-
-
-.card:hover{
-
-    transform:translateY(-15px) scale(1.03);
-
-    box-shadow:0 15px 30px #aaa;
-
-}
-
-
-
-
-.card img{
-
-    transition:.5s;
-
-}
-
-
-
-.card:hover img{
+.hero-buttons a:hover{
 
     transform:scale(1.1);
 
@@ -271,19 +247,258 @@ nav{
 
 
 
-/* BUTTON */
+/* ================= COMMON PAGE ================= */
+
+
+.page-banner{
+
+    height:60vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    text-align:center;
+
+    color:white;
+
+    background:
+
+    linear-gradient(
+    rgba(0,0,0,.5),
+    rgba(0,0,0,.5)
+    ),
+
+    url("one.jpg");
+
+    background-size:cover;
+
+}
+
+
+
+.page-banner h1{
+
+    font-size:50px;
+
+}
+
+
+
+
+
+/* ================= CARDS ================= */
+
+
+.travel-info,
+.about-content,
+.offers-section{
+
+    padding:80px 8%;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+}
+
+
+
+.info-card,
+.about-box,
+.offer-card{
+
+    background:white;
+
+    padding:30px;
+
+    text-align:center;
+
+    border-radius:15px;
+
+    box-shadow:0 10px 25px #ddd;
+
+    transition:.5s;
+
+}
+
+
+
+.info-card:hover,
+.about-box:hover,
+.offer-card:hover{
+
+    transform:translateY(-15px);
+
+}
+
+
+
+
+
+.info-card i,
+.about-box i{
+
+    font-size:40px;
+
+    color:#ff6b6b;
+
+}
+
+
+
+
+
+
+
+/* ================= OFFER ================= */
+
+
+.offer-card h2{
+
+    color:#ff6b6b;
+
+}
+
+
+
+.offer-card a{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    background:#ff6b6b;
+
+    color:white;
+
+    padding:10px 25px;
+
+    border-radius:30px;
+
+    text-decoration:none;
+
+}
+
+
+
+
+
+
+
+/* ================= CONTACT ================= */
+
+
+.contact-section{
+
+    padding:120px 8%;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:40px;
+
+}
+
+
+
+.contact-info,
+.contact-form,
+.booking-box{
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px #ddd;
+
+}
+
+
+
+.contact-buttons a{
+
+    display:inline-block;
+
+    margin:10px;
+
+    padding:10px 20px;
+
+    background:#ff6b6b;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:30px;
+
+}
+
+
+
+
+
+input,
+textarea,
+select{
+
+    width:100%;
+
+    padding:14px;
+
+    margin:10px 0;
+
+    border-radius:10px;
+
+    border:1px solid #ddd;
+
+}
+
+
+
+textarea{
+
+    height:120px;
+
+}
+
 
 
 button{
 
-    transition:.4s;
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    background:#ff6b6b;
+
+    color:white;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+    font-size:16px;
 
 }
+
 
 
 button:hover{
 
-    transform:scale(1.05);
+    background:crimson;
 
 }
 
@@ -291,12 +506,10 @@ button:hover{
 
 
 
+/* ================= LOGIN SIGNUP ================= */
 
-/* LOGIN SIGNUP GLASS DESIGN */
 
-
-.auth-page,
-.form-page{
+.auth-page{
 
     min-height:100vh;
 
@@ -321,8 +534,7 @@ button:hover{
 
 
 
-.auth-box,
-.form-box{
+.auth-box{
 
     width:90%;
 
@@ -338,48 +550,80 @@ button:hover{
 
     color:white;
 
+    text-align:center;
+
     animation:zoom 1s;
 
 }
 
 
 
-.auth-box input,
-.form-box input,
-.form-box textarea,
-.form-box select{
+.auth-logo i{
 
-    width:100%;
+    font-size:45px;
 
-    padding:15px;
+    color:#ff6b6b;
 
-    margin:10px 0;
+}
 
-    border:none;
 
-    border-radius:30px;
+
+.input-box{
+
+    position:relative;
+
+}
+
+
+
+.input-box i{
+
+    position:absolute;
+
+    left:15px;
+
+    top:25px;
+
+}
+
+
+
+.input-box input{
+
+    padding-left:45px;
 
 }
 
 
 
 
-.auth-box button,
-.form-box button{
 
-    width:100%;
+.switch a,
+.back-btn{
 
-    padding:15px;
+    color:#ffb3b3;
 
-    border:none;
+    text-decoration:none;
 
-    border-radius:30px;
+}
 
-    background:#ff6b6b;
+
+
+
+
+
+/* ================= FOOTER ================= */
+
+
+footer{
+
+    background:#111;
 
     color:white;
 
-    cursor:pointer;
+    text-align:center;
+
+    padding:20px;
 
 }
 
@@ -387,10 +631,11 @@ button:hover{
 
 
 
-/* ANIMATION */
+
+/* ================= ANIMATION ================= */
 
 
-@keyframes fadeUp{
+@keyframes fade{
 
 from{
 
@@ -412,46 +657,20 @@ transform:translateY(0);
 
 
 
-
 @keyframes zoom{
 
 from{
 
-opacity:0;
-
 transform:scale(.7);
+
+opacity:0;
 
 }
 
-
 to{
-
-opacity:1;
 
 transform:scale(1);
 
-}
-
-}
-
-
-
-
-@keyframes slideLeft{
-
-from{
-
-transform:translateX(-100px);
-
-opacity:0;
-
-}
-
-
-to{
-
-transform:translateX(0);
-
 opacity:1;
 
 }
@@ -462,17 +681,10 @@ opacity:1;
 
 
 
-/* MOBILE */
+/* ================= MOBILE ================= */
 
 
 @media(max-width:768px){
-
-
-.hero h1{
-
-font-size:35px;
-
-}
 
 
 .menu{
@@ -489,9 +701,25 @@ display:none;
 }
 
 
-.logo{
+.hero h1{
 
-font-size:22px;
+font-size:35px;
+
+}
+
+
+
+.contact-section{
+
+grid-template-columns:1fr;
+
+}
+
+
+
+.page-banner h1{
+
+font-size:35px;
 
 }
 
