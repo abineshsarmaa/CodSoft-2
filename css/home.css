@@ -929,3 +929,55 @@ font-size:14px;
 
 
 }
+
+/* ===============================
+ DARK MODE
+================================ */
+
+
+body.dark-mode{
+
+background:#111;
+
+color:white;
+
+}
+
+
+
+body.dark-mode .services,
+body.dark-mode .gallery,
+body.dark-mode .reviews{
+
+background:#111;
+
+}
+
+
+
+body.dark-mode .card,
+body.dark-mode .review{
+
+background:#222;
+
+color:white;
+
+}
+
+
+
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p{
+
+color:white;
+
+}
+
+
+
+.theme-btn{
+
+cursor:pointer;
+
+}
