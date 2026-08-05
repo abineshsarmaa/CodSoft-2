@@ -7,9 +7,16 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Sign In</title>
 
-<link rel="stylesheet" href="style.css">
+<title>Sign In | Epic Journeys</title>
+
+
+<link rel="stylesheet" href="css/signin.css">
+
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
 
 </head>
 
@@ -17,37 +24,95 @@
 <body>
 
 
-<section class="auth-page">
+
+<div class="signin-page">
 
 
-<div class="auth-box">
+
+<div class="signin-box">
+
+
+
+<div class="logo">
+
+<i class="fa-solid fa-plane"></i>
+
+Epic Journeys
+
+</div>
+
+
+
 
 
 <h1>
-Sign In
+Welcome Back
 </h1>
+
+
+
+<p>
+Sign in to continue your journey
+</p>
+
+
+
+
 
 
 <form>
 
 
-<input type="email" placeholder="Email">
+<div class="input-box">
+
+<i class="fa-solid fa-envelope"></i>
+
+<input 
+type="email"
+placeholder="Email Address"
+required>
+
+</div>
 
 
-<input type="password" placeholder="Password">
 
 
-<button>
-Login
+
+<div class="input-box">
+
+<i class="fa-solid fa-lock"></i>
+
+<input 
+type="password"
+placeholder="Password"
+id="password"
+required>
+
+
+<i class="fa-solid fa-eye"
+id="showPassword"></i>
+
+
+</div>
+
+
+
+
+
+
+<button type="submit">
+
+Sign In
+
 </button>
 
 
-</form>
 
 
 
-<p>
-Don't have account?
+<p class="account">
+
+Don't have an account?
 
 <a href="signup.html">
 Create Account
@@ -56,10 +121,33 @@ Create Account
 </p>
 
 
+
+<a href="index.html" class="home-link">
+
+← Back To Home
+
+</a>
+
+
+
+</form>
+
+
+
+
 </div>
 
 
-</section>
+
+</div>
+
+
+
+
+
+
+
+<script src="js/signin.js"></script>
 
 
 </body>
