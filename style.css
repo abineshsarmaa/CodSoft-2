@@ -5,8 +5,13 @@
     padding:0;
     box-sizing:border-box;
     font-family:'Poppins',sans-serif;
+}
+
+
+html{
     scroll-behavior:smooth;
 }
+
 
 body{
     background:#f5f5f5;
@@ -14,94 +19,129 @@ body{
 }
 
 
-/* HEADER */
+
+/* ================= HEADER ================= */
+
 
 header{
-    width:100%;
+
     min-height:100vh;
+
     background:
-    linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
     url("one.jpg");
 
     background-size:cover;
     background-position:center;
+
 }
 
 
-/* NAVBAR */
+
+/* ================= NAVBAR ================= */
+
 
 nav{
+
     width:100%;
+
     padding:20px 8%;
+
     display:flex;
+
     justify-content:space-between;
+
     align-items:center;
 
     position:fixed;
-    top:0;
-    left:0;
 
-    background:rgba(0,0,0,0.35);
-    backdrop-filter:blur(8px);
+    top:0;
+
+    background:rgba(0,0,0,.35);
+
+    backdrop-filter:blur(10px);
 
     z-index:1000;
+
 }
+
 
 
 .logo{
+
     color:white;
-    font-size:30px;
-    font-weight:700;
-    letter-spacing:2px;
+
+    font-size:28px;
+
+    font-weight:bold;
+
 }
+
 
 
 .menu{
+
     display:flex;
+
     gap:25px;
+
 }
+
 
 
 .menu a{
+
     color:white;
+
     text-decoration:none;
+
     font-size:17px;
-    transition:.3s;
+
 }
+
 
 
 .menu a:hover{
+
     color:#ff6b6b;
+
 }
 
 
-.register a{
 
-    text-decoration:none;
+.account-buttons{
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+
+
+.account-buttons a{
+
     background:#ff6b6b;
+
     color:white;
 
-    padding:10px 22px;
+    padding:10px 18px;
+
     border-radius:5px;
 
-}
-
-
-.register a:hover{
-
-    background:crimson;
+    text-decoration:none;
 
 }
 
 
-/* MOBILE MENU ICON */
 
 .menu-btn{
 
     display:none;
+
     color:white;
+
     font-size:28px;
-    cursor:pointer;
 
 }
 
@@ -109,7 +149,10 @@ nav{
 
 
 
-/* HERO SECTION */
+
+
+/* ================= HERO ================= */
+
 
 
 .hero{
@@ -117,7 +160,9 @@ nav{
     min-height:100vh;
 
     display:flex;
+
     justify-content:center;
+
     align-items:center;
 
     flex-direction:column;
@@ -134,7 +179,6 @@ nav{
 
 .hero span{
 
-    font-size:18px;
     letter-spacing:5px;
 
 }
@@ -144,6 +188,7 @@ nav{
 .hero h1{
 
     font-size:60px;
+
     margin:20px 0;
 
 }
@@ -153,7 +198,6 @@ nav{
 .hero p{
 
     max-width:650px;
-    line-height:1.7;
 
 }
 
@@ -163,10 +207,11 @@ nav{
 
     margin-top:30px;
 
-    text-decoration:none;
-
     background:#ff6b6b;
+
     color:white;
+
+    text-decoration:none;
 
     padding:14px 30px;
 
@@ -176,7 +221,10 @@ nav{
 
 
 
-/* COMMON SECTION */
+
+
+
+/* ================= SECTION ================= */
 
 
 section{
@@ -186,10 +234,13 @@ section{
 }
 
 
-section h2{
+
+h2{
 
     text-align:center;
+
     font-size:35px;
+
     margin-bottom:40px;
 
 }
@@ -198,15 +249,16 @@ section h2{
 
 
 
-/* DESTINATION */
+
+/* ================= CARDS ================= */
+
 
 
 .cards{
 
     display:grid;
 
-    grid-template-columns:
-    repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 
     gap:25px;
 
@@ -222,18 +274,7 @@ section h2{
 
     overflow:hidden;
 
-    box-shadow:
-    0 5px 15px rgba(0,0,0,.15);
-
-    transition:.3s;
-
-}
-
-
-
-.card:hover{
-
-    transform:translateY(-10px);
+    box-shadow:0 5px 15px #ddd;
 
 }
 
@@ -242,43 +283,38 @@ section h2{
 .card img{
 
     width:100%;
+
     height:220px;
+
     object-fit:cover;
 
 }
 
 
 
-.card h3{
+.card h3,
+.card p{
 
     padding:15px;
 
 }
 
 
-.card p{
-
-    padding:0 15px 20px;
-
-}
 
 
 
 
 
-
-
-/* OFFERS */
+/* ================= OFFERS ================= */
 
 
 .offer-box{
 
-    display:grid;
+display:grid;
 
-    grid-template-columns:
-    repeat(auto-fit,minmax(220px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 
-    gap:20px;
+gap:20px;
 
 }
 
@@ -286,36 +322,15 @@ section h2{
 
 .offer-box div{
 
-    background:#ff6b6b;
+background:#ff6b6b;
 
-    color:white;
+color:white;
 
-    padding:30px;
+padding:30px;
 
-    text-align:center;
+text-align:center;
 
-    border-radius:10px;
-
-}
-
-
-
-
-
-
-
-/* ABOUT */
-
-
-.about p{
-
-    max-width:900px;
-
-    margin:auto;
-
-    text-align:center;
-
-    line-height:1.8;
+border-radius:10px;
 
 }
 
@@ -325,21 +340,12 @@ section h2{
 
 
 
-/* CONTACT */
+/* ================= CONTACT ================= */
 
 
 .contact{
 
-    text-align:center;
-
-}
-
-
-.contact p{
-
-    margin:15px;
-
-    font-size:18px;
+text-align:center;
 
 }
 
@@ -347,29 +353,19 @@ section h2{
 
 .contact-btn{
 
-    display:inline-block;
+display:inline-block;
 
-    margin:10px;
+background:#ff6b6b;
 
-    padding:12px 25px;
+color:white;
 
-    background:#ff6b6b;
+padding:12px 25px;
 
-    color:white;
+margin:10px;
 
-    text-decoration:none;
+border-radius:5px;
 
-    border-radius:5px;
-
-    transition:.3s;
-
-}
-
-
-
-.contact-btn:hover{
-
-    background:crimson;
+text-decoration:none;
 
 }
 
@@ -379,18 +375,149 @@ section h2{
 
 
 
-/* FOOTER */
+/* ================= FORM PAGES ================= */
+
+
+.form-page{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+background:
+
+linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+url("one.jpg");
+
+background-size:cover;
+
+}
+
+
+
+.form-box{
+
+background:white;
+
+padding:40px;
+
+width:90%;
+
+max-width:450px;
+
+border-radius:10px;
+
+text-align:center;
+
+}
+
+
+
+.form-box h2{
+
+margin-bottom:25px;
+
+}
+
+
+
+.form-box input,
+.form-box select,
+.form-box textarea{
+
+width:100%;
+
+padding:12px;
+
+margin:10px 0;
+
+border:1px solid #ccc;
+
+border-radius:5px;
+
+}
+
+
+
+.form-box textarea{
+
+height:120px;
+
+resize:none;
+
+}
+
+
+
+.form-box button{
+
+width:100%;
+
+padding:12px;
+
+background:#ff6b6b;
+
+color:white;
+
+border:none;
+
+border-radius:5px;
+
+cursor:pointer;
+
+font-size:16px;
+
+}
+
+
+
+.form-box button:hover{
+
+background:crimson;
+
+}
+
+
+
+.form-box a{
+
+color:#ff6b6b;
+
+text-decoration:none;
+
+}
+
+
+
+.back-home{
+
+display:inline-block;
+
+margin-top:15px;
+
+}
+
+
+
+
+
+
+/* ================= FOOTER ================= */
 
 
 footer{
 
-    background:#111;
+background:#111;
 
-    color:white;
+color:white;
 
-    text-align:center;
+text-align:center;
 
-    padding:20px;
+padding:20px;
 
 }
 
@@ -400,7 +527,8 @@ footer{
 
 
 
-/* MOBILE RESPONSIVE */
+
+/* ================= MOBILE ================= */
 
 
 @media(max-width:768px){
@@ -408,14 +536,15 @@ footer{
 
 nav{
 
-    padding:20px;
+padding:20px;
 
 }
 
 
+
 .logo{
 
-    font-size:23px;
+font-size:22px;
 
 }
 
@@ -423,23 +552,23 @@ nav{
 
 .menu{
 
-    position:absolute;
+position:absolute;
 
-    top:75px;
+top:75px;
 
-    left:-100%;
+left:-100%;
 
-    width:100%;
+width:100%;
 
-    background:#111;
+background:#111;
 
-    flex-direction:column;
+flex-direction:column;
 
-    text-align:center;
+text-align:center;
 
-    padding:20px 0;
+padding:20px;
 
-    transition:.4s;
+transition:.4s;
 
 }
 
@@ -447,7 +576,7 @@ nav{
 
 .menu.active{
 
-    left:0;
+left:0;
 
 }
 
@@ -455,7 +584,15 @@ nav{
 
 .menu a{
 
-    padding:15px;
+padding:15px;
+
+}
+
+
+
+.account-buttons{
+
+display:none;
 
 }
 
@@ -463,15 +600,7 @@ nav{
 
 .menu-btn{
 
-    display:block;
-
-}
-
-
-
-.register{
-
-    display:none;
+display:block;
 
 }
 
@@ -479,7 +608,7 @@ nav{
 
 .hero h1{
 
-    font-size:35px;
+font-size:35px;
 
 }
 
@@ -487,14 +616,7 @@ nav{
 
 .hero span{
 
-    font-size:14px;
-
-}
-
-
-.hero p{
-
-    font-size:14px;
+font-size:14px;
 
 }
 
