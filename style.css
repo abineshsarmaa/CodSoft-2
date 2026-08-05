@@ -1,34 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+/* ================= OTHER PAGES ================= */
 
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
+/* Page Banner */
 
+.page-banner{
 
-body{
+    min-height:60vh;
 
-    background:#f8f8f8;
+    display:flex;
 
-    color:#333;
+    justify-content:center;
 
-}
+    align-items:center;
 
+    flex-direction:column;
 
-/* ================= HEADER ================= */
+    text-align:center;
 
-
-header{
-
-    min-height:100vh;
+    color:white;
 
     background:
     linear-gradient(
-    rgba(0,0,0,.55),
-    rgba(0,0,0,.55)
+    rgba(0,0,0,.6),
+    rgba(0,0,0,.6)
     ),
     url("one.jpg");
 
@@ -36,313 +30,14 @@ header{
 
     background-position:center;
 
-    animation:bg 12s infinite alternate;
-
-}
-
-
-
-@keyframes bg{
-
-from{
-background-position:left;
-}
-
-to{
-background-position:right;
-}
-
-}
-
-
-
-
-/* ================= NAVBAR ================= */
-
-
-nav{
-
-    width:100%;
-
-    padding:20px 8%;
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    position:fixed;
-
-    top:0;
-
-    z-index:1000;
-
-    background:rgba(0,0,0,.35);
-
-    backdrop-filter:blur(10px);
-
-}
-
-
-
-.logo{
-
-    color:white;
-
-    font-size:28px;
-
-    font-weight:700;
-
-}
-
-
-
-.logo i{
-
-    color:#ff6b6b;
-
-}
-
-
-
-
-.menu{
-
-    display:flex;
-
-    gap:30px;
-
-}
-
-
-
-.menu a{
-
-    color:white;
-
-    text-decoration:none;
-
-    font-size:16px;
-
-    transition:.3s;
-
-}
-
-
-
-.menu a:hover{
-
-    color:#ff6b6b;
-
-}
-
-
-
-
-
-.nav-btn a{
-
-    text-decoration:none;
-
-    color:white;
-
-    background:#ff6b6b;
-
-    padding:10px 18px;
-
-    border-radius:30px;
-
-    margin-left:8px;
-
-    transition:.4s;
-
-}
-
-
-
-.nav-btn a:hover{
-
-    background:#ff3030;
-
-    transform:scale(1.1);
-
-}
-
-
-
-
-
-
-
-/* ================= HERO ================= */
-
-
-.hero{
-
-    min-height:100vh;
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
-    align-items:center;
-
-    text-align:center;
-
-    color:white;
-
     padding:20px;
 
-    animation:show 1.5s;
-
 }
 
 
+.page-banner h1{
 
-.small-text{
-
-    letter-spacing:5px;
-
-    font-size:15px;
-
-}
-
-
-
-.hero h1{
-
-    font-size:65px;
-
-    line-height:1.2;
-
-    margin:20px 0;
-
-}
-
-
-
-.hero p{
-
-    max-width:650px;
-
-    font-size:18px;
-
-}
-
-
-
-
-.hero-btn{
-
-    margin-top:35px;
-
-}
-
-
-
-.hero-btn a{
-
-    display:inline-block;
-
-    padding:14px 35px;
-
-    margin:10px;
-
-    color:white;
-
-    text-decoration:none;
-
-    background:#ff6b6b;
-
-    border-radius:30px;
-
-    transition:.4s;
-
-}
-
-
-
-.hero-btn a:hover{
-
-    transform:translateY(-5px);
-
-    background:#ff3030;
-
-}
-
-
-
-
-
-
-/* ================= FEATURES ================= */
-
-
-.features{
-
-    padding:80px 8%;
-
-    text-align:center;
-
-}
-
-
-
-.features h2{
-
-    font-size:40px;
-
-    margin-bottom:40px;
-
-}
-
-
-
-.feature-box{
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(250px,1fr));
-
-    gap:30px;
-
-}
-
-
-
-.feature-box div{
-
-    background:white;
-
-    padding:35px;
-
-    border-radius:15px;
-
-    box-shadow:0 10px 25px #ddd;
-
-    transition:.5s;
-
-}
-
-
-
-.feature-box div:hover{
-
-    transform:translateY(-15px);
-
-}
-
-
-
-.feature-box i{
-
-    font-size:45px;
-
-    color:#ff6b6b;
+    font-size:50px;
 
     margin-bottom:15px;
 
@@ -350,30 +45,255 @@ nav{
 
 
 
+/* ABOUT PAGE */
 
 
-/* ================= OFFER ================= */
+.about-content{
+
+    padding:80px 8%;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+
+}
 
 
-.offer-home{
+.about-box{
 
-    margin:40px 8%;
+    background:white;
 
-    padding:60px;
+    padding:35px;
 
     text-align:center;
 
-    color:white;
+    border-radius:20px;
+
+    box-shadow:0 10px 25px #ddd;
+
+    transition:.4s;
+
+}
+
+
+.about-box:hover{
+
+    transform:translateY(-10px);
+
+}
+
+
+.about-box i{
+
+    font-size:45px;
+
+    color:#ff6b6b;
+
+    margin-bottom:20px;
+
+}
+
+
+
+
+/* OFFERS PAGE */
+
+
+.offers-section{
+
+    padding:80px 8%;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+}
+
+
+
+.offer-card{
+
+    background:white;
+
+    padding:35px;
+
+    text-align:center;
 
     border-radius:20px;
+
+    box-shadow:0 10px 25px #ddd;
+
+    transition:.4s;
+
+}
+
+
+
+.offer-card:hover{
+
+    transform:translateY(-15px);
+
+}
+
+
+
+.offer-card i{
+
+    font-size:45px;
+
+    color:#ff6b6b;
+
+}
+
+
+
+.offer-card h2{
+
+    color:#ff6b6b;
+
+}
+
+
+
+
+.offer-card a{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    background:#ff6b6b;
+
+    color:white;
+
+    padding:12px 30px;
+
+    border-radius:30px;
+
+    text-decoration:none;
+
+}
+
+
+
+
+
+/* CONTACT PAGE */
+
+
+.contact-section{
+
+    padding:80px 8%;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:40px;
+
+}
+
+
+
+.contact-info,
+.contact-form,
+.booking-box{
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 25px #ddd;
+
+}
+
+
+
+.contact-info i{
+
+    color:#ff6b6b;
+
+    font-size:25px;
+
+}
+
+
+
+
+.contact-buttons a{
+
+    display:inline-block;
+
+    margin:8px;
+
+    padding:12px 20px;
+
+    background:#ff6b6b;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:30px;
+
+}
+
+
+
+
+
+/* BOOKING PAGE */
+
+
+.booking-section{
+
+    padding:80px 8%;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+
+
+.booking-box{
+
+    width:100%;
+
+    max-width:600px;
+
+}
+
+
+
+
+
+/* SIGN IN / SIGN UP */
+
+
+.auth-page{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
 
     background:
 
     linear-gradient(
-    rgba(0,0,0,.5),
-    rgba(0,0,0,.5)
+    rgba(0,0,0,.6),
+    rgba(0,0,0,.6)
     ),
-
     url("one.jpg");
 
     background-size:cover;
@@ -382,79 +302,92 @@ nav{
 
 
 
-.offer-home h2{
+.auth-box{
 
-    font-size:40px;
+    width:90%;
+
+    max-width:420px;
+
+    padding:40px;
+
+    background:white;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:0 15px 30px #333;
 
 }
 
 
 
-.offer-home a,
-.contact-home a{
+.auth-box h1{
 
-    display:inline-block;
+    margin-bottom:15px;
 
-    margin-top:20px;
+}
 
-    padding:12px 30px;
+
+
+.input-box{
+
+    margin:15px 0;
+
+}
+
+
+
+.input-box input{
+
+    width:100%;
+
+    padding:14px;
+
+    border-radius:30px;
+
+    border:1px solid #ccc;
+
+}
+
+
+
+.auth-box button{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
 
     background:#ff6b6b;
 
     color:white;
 
-    text-decoration:none;
-
     border-radius:30px;
 
+    cursor:pointer;
+
 }
 
 
 
+.auth-box button:hover{
 
-
-
-/* ================= CONTACT CTA ================= */
-
-
-.contact-home{
-
-    padding:70px 8%;
-
-    text-align:center;
-
-    background:#111;
-
-    color:white;
+    background:crimson;
 
 }
 
 
 
 
-.contact-home h2{
+.back-btn{
 
-    font-size:35px;
+    display:inline-block;
 
-}
+    margin-top:20px;
 
-
-
-
-
-
-/* ================= FOOTER ================= */
-
-
-footer{
-
-    background:#000;
-
-    color:white;
-
-    text-align:center;
-
-    padding:20px;
+    color:#ff6b6b;
 
 }
 
@@ -462,97 +395,31 @@ footer{
 
 
 
-
-
-@keyframes show{
-
-from{
-
-opacity:0;
-
-transform:translateY(50px);
-
-}
-
-to{
-
-opacity:1;
-
-transform:translateY(0);
-
-}
-
-}
-
-
-
-
-
-
-/* ================= MOBILE ================= */
-
+/* MOBILE */
 
 @media(max-width:768px){
 
 
-nav{
+.contact-section{
 
-    padding:15px;
-
-}
-
-
-
-.menu{
-
-    display:none;
+    grid-template-columns:1fr;
 
 }
 
 
-
-.nav-btn a{
-
-    padding:8px 10px;
-
-    font-size:12px;
-
-}
-
-
-
-.logo{
-
-    font-size:20px;
-
-}
-
-
-
-.hero h1{
+.page-banner h1{
 
     font-size:35px;
 
 }
 
 
+.about-content,
+.offers-section{
 
-.small-text{
-
-    font-size:12px;
-
-}
-
-
-
-.offer-home{
-
-    margin:20px;
-
-    padding:40px 20px;
+    padding:40px 5%;
 
 }
-
 
 
 }
