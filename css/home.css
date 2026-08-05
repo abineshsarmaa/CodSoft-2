@@ -120,137 +120,64 @@ background-position:center;
 /* ================= NAVBAR ================= */
 
 
-.navbar{
+/* ================= NAV BUTTON SAME AS CONTACT ================= */
 
 
-width:92%;
-
-margin:20px auto;
-
-
-padding:15px 25px;
-
-
-position:fixed;
-
-top:0;
-
-left:0;
-
-right:0;
-
-
-z-index:1000;
-
-
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-
-background:rgba(255,255,255,.15);
-
-
-backdrop-filter:blur(15px);
-
-
-border-radius:50px;
-
-
-}
-
-
-
-.logo{
-
-color:white;
-
-font-size:28px;
-
-font-weight:700;
-
-text-decoration:none;
-
-}
-
-
-
-.logo i{
-
-color:#ff6b6b;
-
-}
-
-
-
-
-
-.nav-links{
-
-display:flex;
-
-gap:30px;
-
-}
-
-
-
-.nav-links a{
-
-color:white;
-
-text-decoration:none;
-
-transition:.3s;
-
-}
-
-
-
-.nav-links a:hover{
-
-color:#ff6b6b;
-
-}
-
-
-
-
-.nav-actions{
+.nav-buttons{
 
 display:flex;
 
 align-items:center;
 
-gap:8px;
+gap:5px;
 
 }
 
 
 
-
-.nav-actions a,
-.nav-actions button{
-
-
-border:none;
+.nav-buttons a{
 
 background:#ff6b6b;
 
 color:white;
 
-
-padding:10px 15px;
-
+padding:10px 18px;
 
 border-radius:30px;
 
-
 text-decoration:none;
 
+margin-left:5px;
+
+font-size:14px;
+
+}
+
+
+
+.nav-buttons a:hover{
+
+background:#e63946;
+
+}
+
+
+
+
+.nav-buttons button{
+
+
+width:40px;
+
+height:40px;
+
+border:none;
+
+border-radius:50%;
+
+background:#ff6b6b;
+
+color:white;
 
 cursor:pointer;
 
@@ -258,9 +185,28 @@ cursor:pointer;
 
 
 
-#menuBtn{
 
-display:none;
+
+@media(max-width:768px){
+
+
+.nav-buttons a{
+
+font-size:10px;
+
+padding:7px 9px;
+
+}
+
+
+.nav-buttons button{
+
+width:32px;
+
+height:32px;
+
+}
+
 
 }
 
