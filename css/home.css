@@ -1,5 +1,526 @@
+/* =====================================
+   EPIC JOURNEYS PREMIUM HOME CSS
+===================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+
+body{
+    overflow-x:hidden;
+    background:#f7f7f7;
+}
+
+
+html{
+    scroll-behavior:smooth;
+}
+
+
+
 /* ===============================
-   MOBILE NAVBAR FIX
+   HERO BACKGROUND
+================================ */
+
+
+.home-header{
+
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+    120deg,
+    rgba(0,0,0,.75),
+    rgba(0,0,0,.35)
+    ),
+    url("../one.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    animation:bgZoom 15s infinite alternate;
+
+}
+
+
+@keyframes bgZoom{
+
+from{
+background-size:100%;
+}
+
+to{
+background-size:115%;
+}
+
+}
+
+
+
+/* ===============================
+ NAVBAR
+================================ */
+
+
+.navbar{
+
+    width:92%;
+
+    margin:20px auto;
+
+    padding:15px 25px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+
+    position:fixed;
+
+    left:0;
+
+    right:0;
+
+    z-index:999;
+
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(15px);
+
+
+    border-radius:50px;
+
+    border:1px solid rgba(255,255,255,.25);
+
+}
+
+
+
+.logo{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:28px;
+
+    font-weight:700;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+
+
+.logo i{
+
+    color:#ff6b6b;
+
+}
+
+
+
+
+.nav-links{
+
+    display:flex;
+
+    gap:35px;
+
+}
+
+
+
+.nav-links a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:500;
+
+    transition:.3s;
+
+}
+
+
+
+.nav-links a:hover{
+
+    color:#ff6b6b;
+
+}
+
+
+
+
+.nav-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+
+
+.nav-actions a{
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:10px 18px;
+
+    border-radius:30px;
+
+    background:#ff6b6b;
+
+    font-size:14px;
+
+    transition:.3s;
+
+}
+
+
+
+.nav-actions a:hover{
+
+    background:white;
+
+    color:#ff6b6b;
+
+}
+
+
+
+
+
+.menu-icon{
+
+    display:none;
+
+    border:none;
+
+    background:none;
+
+    color:white;
+
+    font-size:25px;
+
+    cursor:pointer;
+
+}
+
+
+
+
+
+
+
+/* ===============================
+ HERO
+================================ */
+
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    color:white;
+
+    padding:20px;
+
+}
+
+
+
+.hero-content{
+
+    animation:fadeUp 1.5s ease;
+
+}
+
+
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(60px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+
+
+.welcome{
+
+    letter-spacing:6px;
+
+    font-size:14px;
+
+}
+
+
+
+.hero h1{
+
+    font-size:70px;
+
+    line-height:1.15;
+
+    margin:25px 0;
+
+    font-weight:800;
+
+}
+
+
+
+.description{
+
+    font-size:18px;
+
+    max-width:650px;
+
+    margin:auto;
+
+}
+
+
+
+.hero-buttons a{
+
+    display:inline-flex;
+
+    gap:10px;
+
+    align-items:center;
+
+    margin:35px 8px;
+
+    padding:15px 40px;
+
+    border-radius:50px;
+
+    background:#ff6b6b;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.4s;
+
+}
+
+
+
+.hero-buttons a:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 10px 30px rgba(255,107,107,.5);
+
+}
+
+
+
+
+
+
+
+/* ===============================
+ SERVICES
+================================ */
+
+
+.services{
+
+    padding:90px 8%;
+
+    text-align:center;
+
+}
+
+
+
+.services h2{
+
+    font-size:42px;
+
+    margin-bottom:45px;
+
+}
+
+
+
+.service-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+}
+
+
+
+.service-card{
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+    transition:.4s;
+
+}
+
+
+
+.service-card:hover{
+
+    transform:translateY(-15px);
+
+}
+
+
+
+.service-card i{
+
+    font-size:45px;
+
+    color:#ff6b6b;
+
+    margin-bottom:20px;
+
+}
+
+
+
+
+
+
+/* ===============================
+ BANNERS
+================================ */
+
+
+.offer-banner,
+.booking-banner{
+
+    margin:60px 8%;
+
+    padding:70px 20px;
+
+    border-radius:30px;
+
+    text-align:center;
+
+    color:white;
+
+
+    background:
+
+    linear-gradient(
+    rgba(0,0,0,.6),
+    rgba(0,0,0,.6)
+    ),
+
+    url("../one.jpg");
+
+    background-size:cover;
+
+}
+
+
+
+.offer-banner a,
+.booking-banner a{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    padding:12px 30px;
+
+    background:#ff6b6b;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:30px;
+
+}
+
+
+
+
+
+footer{
+
+    background:#111;
+
+    color:white;
+
+    text-align:center;
+
+    padding:25px;
+
+}
+
+
+
+
+
+
+
+/* ===============================
+ MOBILE RESPONSIVE
 ================================ */
 
 
@@ -8,13 +529,9 @@
 
 .navbar{
 
-    width:95%;
+    width:94%;
 
-    padding:15px 18px;
-
-    border-radius:25px;
-
-    flex-wrap:wrap;
+    padding:12px 18px;
 
 }
 
@@ -28,23 +545,61 @@
 
 
 
-.nav-buttons{
+.nav-links{
 
-    display:flex;
 
-    gap:5px;
+    position:absolute;
+
+    top:75px;
+
+    left:0;
+
+    width:100%;
+
+
+    background:rgba(0,0,0,.95);
+
+
+    border-radius:20px;
+
+
+    display:none;
+
+
+    flex-direction:column;
+
+
+    text-align:center;
+
+
+    padding:20px;
+
 
 }
 
 
 
-.nav-buttons a{
+.nav-links.active{
 
-    padding:8px 12px;
+    display:flex;
+
+}
+
+
+
+.nav-links a{
+
+    padding:12px;
+
+}
+
+
+
+.nav-actions a{
+
+    padding:7px 10px;
 
     font-size:11px;
-
-    white-space:nowrap;
 
 }
 
@@ -58,57 +613,37 @@
 
 
 
-.nav-links{
+.hero h1{
 
-
-    order:3;
-
-    width:100%;
-
-
-    display:none;
-
-
-    flex-direction:column;
-
-
-    background:rgba(0,0,0,.9);
-
-
-    margin-top:15px;
-
-
-    padding:20px;
-
-
-    border-radius:20px;
-
+    font-size:38px;
 
 }
 
 
 
-.nav-links.active{
+.welcome{
+
+    font-size:10px;
+
+    letter-spacing:3px;
+
+}
 
 
-    display:flex;
 
+.description{
+
+    font-size:14px;
 
 }
 
 
 
-.nav-links a{
+.hero-buttons a{
 
-
-    padding:12px;
-
-
-    text-align:center;
-
+    padding:12px 25px;
 
 }
-
 
 
 }
