@@ -809,3 +809,123 @@ font-size:14px;
 
 
 }
+/* ===============================
+   MOBILE NAVBAR FINAL FIX
+================================ */
+
+@media(max-width:768px){
+
+
+.navbar{
+
+    width:95%;
+
+    padding:12px 15px;
+
+    border-radius:25px;
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+.logo{
+
+    font-size:18px;
+
+}
+
+
+
+.nav-actions{
+
+    gap:5px;
+
+}
+
+
+
+.nav-actions a{
+
+    padding:7px 9px;
+
+    font-size:10px;
+
+}
+
+
+
+#themeBtn{
+
+    display:none;
+
+}
+
+
+
+#menuBtn{
+
+    display:block;
+
+    padding:8px 12px;
+
+}
+
+
+
+
+
+.nav-links{
+
+    position:absolute;
+
+    top:75px;
+
+    left:0;
+
+    width:100%;
+
+
+    background:rgba(0,0,0,.95);
+
+
+    display:none;
+
+
+    flex-direction:column;
+
+
+    padding:20px;
+
+
+    border-radius:20px;
+
+
+}
+
+
+
+.nav-links.active{
+
+    display:flex;
+
+}
+
+
+
+.nav-links a{
+
+    padding:12px;
+
+    text-align:center;
+
+    color:white;
+
+}
+
+
+
+}
