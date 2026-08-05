@@ -7,9 +7,16 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Booking - Epic Journeys</title>
 
-<link rel="stylesheet" href="style.css">
+<title>Booking | Epic Journeys</title>
+
+
+<link rel="stylesheet" href="css/booking.css">
+
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
 
 </head>
 
@@ -17,41 +24,154 @@
 <body>
 
 
-<section class="booking-page">
+
+<header class="booking-header">
+
+
+
+<nav class="navbar">
+
+
+<a href="index.html" class="logo">
+
+<i class="fa-solid fa-plane"></i>
+
+Epic Journeys
+
+</a>
+
+
+
+<div class="nav-links">
+
+
+<a href="index.html">Home</a>
+
+<a href="about.html">About</a>
+
+<a href="offers.html">Offers</a>
+
+<a href="contact.html">Contact</a>
+
+
+</div>
+
+
+
+
+<div class="nav-buttons">
+
+
+<a href="signin.html">
+Sign In
+</a>
+
+
+<a href="signup.html">
+Create Account
+</a>
+
+
+</div>
+
+
+</nav>
+
+
+
+
+
+
+<section class="hero">
+
+
+<h1>
+Book Your Journey
+</h1>
+
+
+<p>
+Start your unforgettable travel experience today.
+</p>
+
+
+</section>
+
+
+
+</header>
+
+
+
+
+
+
+
+
+
+<section class="booking-section">
+
 
 
 <div class="booking-box">
 
 
-<h1>
-Book Your Trip
-</h1>
+<h2>
+Travel Booking Form
+</h2>
+
+
 
 
 <form>
 
 
-<input type="text" placeholder="Full Name">
+<input type="text" placeholder="Full Name" required>
 
 
-<input type="email" placeholder="Email Address">
+<input type="email" placeholder="Email Address" required>
 
 
-<input type="tel" placeholder="Mobile Number">
+<input type="tel" placeholder="Mobile Number" required>
 
 
-<input type="text" placeholder="Destination">
+
+<select required>
+
+<option>
+Select Destination
+</option>
+
+<option>
+Beach Paradise
+</option>
+
+<option>
+Mountain Adventure
+</option>
+
+<option>
+City Explorer
+</option>
+
+</select>
+
 
 
 <input type="date">
 
 
-<textarea placeholder="Message"></textarea>
+
+<textarea placeholder="Special Request"></textarea>
 
 
-<button>
+
+<button type="submit">
+
 Confirm Booking
+
 </button>
+
 
 
 </form>
@@ -60,8 +180,37 @@ Confirm Booking
 </div>
 
 
+
+
+
 </section>
 
+
+
+
+
+
+
+
+<footer>
+
+
+<p>
+
+© 2026 Epic Journeys Travel | Developed by Abinesh Sarma
+
+</p>
+
+
+</footer>
+
+
+
+
+
+
+
+<script src="js/booking.js"></script>
 
 
 </body>
