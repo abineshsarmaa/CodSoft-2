@@ -1,3 +1,9 @@
+/* ===============================
+   EPIC JOURNEYS TRAVEL
+   COMPLETE STYLE CSS
+================================ */
+
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 
@@ -15,8 +21,10 @@ html{
 
 
 body{
-    background:#f5f5f5;
+    background:#f7f7f7;
+    color:#333;
 }
+
 
 
 /* ================= NAVBAR ================= */
@@ -33,9 +41,11 @@ body{
 
     position:fixed;
     top:0;
-    z-index:1000;
+    left:0;
 
-    background:rgba(0,0,0,.45);
+    z-index:999;
+
+    background:rgba(0,0,0,0.45);
     backdrop-filter:blur(10px);
 
 }
@@ -51,11 +61,13 @@ body{
 }
 
 
+
 .logo i{
 
     color:#ff6b6b;
 
 }
+
 
 
 
@@ -67,10 +79,13 @@ body{
 }
 
 
+
 .nav-links a{
 
     color:white;
     text-decoration:none;
+    font-size:16px;
+
     transition:.3s;
 
 }
@@ -86,9 +101,11 @@ body{
 
 
 
+
 .nav-buttons a{
 
     text-decoration:none;
+
     color:white;
 
     background:#ff6b6b;
@@ -99,7 +116,7 @@ body{
 
     margin-left:8px;
 
-    transition:.3s;
+    transition:.4s;
 
 }
 
@@ -107,7 +124,9 @@ body{
 
 .nav-buttons a:hover{
 
-    background:crimson;
+    background:#e63946;
+
+    transform:translateY(-3px);
 
 }
 
@@ -116,12 +135,15 @@ body{
 
 
 
-/* ================= HOME ================= */
+
+/* ================= HOME PAGE ================= */
 
 
 .home-header{
 
+
     min-height:100vh;
+
 
     background:
 
@@ -132,17 +154,46 @@ body{
 
     url("one.jpg");
 
+
     background-size:cover;
 
     background-position:center;
+
+
+    animation:zoomBg 15s infinite alternate;
+
 
 }
 
 
 
+@keyframes zoomBg{
+
+from{
+
+background-size:100%;
+
+}
+
+
+to{
+
+background-size:110%;
+
+}
+
+}
+
+
+
+
+
+
 .hero{
 
+
     min-height:100vh;
+
 
     display:flex;
 
@@ -150,11 +201,15 @@ body{
 
     align-items:center;
 
+
     text-align:center;
+
 
     color:white;
 
+
     padding:20px;
+
 
 }
 
@@ -162,7 +217,17 @@ body{
 
 .hero-content{
 
-    animation:show 1.5s;
+
+    animation:fadeUp 1.5s;
+
+
+}
+
+
+
+.hero h4{
+
+    letter-spacing:5px;
 
 }
 
@@ -170,9 +235,13 @@ body{
 
 .hero h1{
 
+
     font-size:65px;
 
+    line-height:1.2;
+
     margin:20px 0;
+
 
 }
 
@@ -180,36 +249,56 @@ body{
 
 .hero p{
 
+
+    max-width:650px;
+
     font-size:18px;
 
+
 }
+
+
 
 
 
 .hero-buttons a{
 
+
     display:inline-block;
 
-    margin:15px 5px;
 
-    padding:13px 30px;
+    margin:25px 8px;
+
+
+    padding:14px 35px;
+
 
     background:#ff6b6b;
 
+
     color:white;
 
-    border-radius:30px;
 
     text-decoration:none;
 
+
+    border-radius:50px;
+
+
     transition:.4s;
 
+
 }
+
 
 
 .hero-buttons a:hover{
 
-    transform:translateY(-8px);
+
+    transform:scale(1.1);
+
+    background:#e63946;
+
 
 }
 
@@ -217,12 +306,18 @@ body{
 
 
 
-/* ================= PAGE BANNER ================= */
+
+
+
+/* ================= COMMON PAGE BANNER ================= */
+
 
 
 .page-banner{
 
+
     height:60vh;
+
 
     display:flex;
 
@@ -230,23 +325,31 @@ body{
 
     align-items:center;
 
+
     flex-direction:column;
 
+
     text-align:center;
+
 
     color:white;
 
 
+
     background:
 
+
     linear-gradient(
-    rgba(0,0,0,.55),
-    rgba(0,0,0,.55)
+    rgba(0,0,0,.6),
+    rgba(0,0,0,.6)
     ),
 
     url("one.jpg");
 
+
+
     background-size:cover;
+
 
 }
 
@@ -254,7 +357,9 @@ body{
 
 .page-banner h1{
 
+
     font-size:50px;
+
 
 }
 
@@ -262,30 +367,30 @@ body{
 
 
 
-/* ================= SERVICES ================= */
+
+
+
+/* ================= CARDS ================= */
+
 
 
 .services,
 .about-section,
-.offer-container,
-.contact-section{
+.offer-container{
+
 
     padding:80px 8%;
 
-}
-
-
-
-.service-container,
-.about-section,
-.offer-container{
 
     display:grid;
 
+
     grid-template-columns:
-    repeat(auto-fit,minmax(250px,1fr));
+    repeat(auto-fit,minmax(260px,1fr));
+
 
     gap:30px;
+
 
 }
 
@@ -297,17 +402,24 @@ body{
 .offer-card,
 .contact-card{
 
+
     background:white;
+
 
     padding:35px;
 
+
     border-radius:20px;
+
 
     text-align:center;
 
-    box-shadow:0 10px 25px #ddd;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.1);
+
 
     transition:.5s;
+
 
 }
 
@@ -318,10 +430,11 @@ body{
 .offer-card:hover,
 .contact-card:hover{
 
-    transform:translateY(-12px);
+
+    transform:translateY(-15px);
+
 
 }
-
 
 
 
@@ -330,11 +443,18 @@ body{
 .about-card i,
 .offer-card i{
 
+
     font-size:45px;
+
 
     color:#ff6b6b;
 
+
+    margin-bottom:20px;
+
+
 }
+
 
 
 
@@ -345,28 +465,37 @@ body{
 
 .offer-card h2{
 
+
     color:#ff6b6b;
+
 
 }
 
 
 
-.offer-card a,
-.contact-buttons a{
+.offer-card a{
+
 
     display:inline-block;
 
+
     margin-top:20px;
 
-    padding:10px 25px;
+
+    padding:12px 30px;
+
 
     background:#ff6b6b;
 
+
     color:white;
+
 
     text-decoration:none;
 
+
     border-radius:30px;
+
 
 }
 
@@ -381,28 +510,52 @@ body{
 
 .contact-section{
 
+
+    padding:80px 8%;
+
+
     display:grid;
+
 
     grid-template-columns:1fr 1fr;
 
-    gap:30px;
+
+    gap:40px;
+
 
 }
+
+
+
+.contact-card{
+
+
+    text-align:left;
+
+
+}
+
 
 
 
 input,
 textarea{
 
+
     width:100%;
 
-    padding:14px;
+
+    padding:15px;
+
 
     margin:10px 0;
 
-    border-radius:10px;
 
     border:1px solid #ddd;
+
+
+    border-radius:10px;
+
 
 }
 
@@ -410,27 +563,48 @@ textarea{
 
 textarea{
 
-    height:120px;
+
+    height:130px;
+
 
 }
 
 
 
+
 button{
+
 
     width:100%;
 
-    padding:14px;
+
+    padding:15px;
+
 
     border:none;
 
+
     background:#ff6b6b;
+
 
     color:white;
 
+
     border-radius:30px;
 
+
     cursor:pointer;
+
+
+}
+
+
+
+button:hover{
+
+
+    background:#e63946;
+
 
 }
 
@@ -445,15 +619,21 @@ button{
 
 .booking-page{
 
+
     min-height:100vh;
+
 
     display:flex;
 
+
     justify-content:center;
+
 
     align-items:center;
 
+
     background:
+
 
     linear-gradient(
     rgba(0,0,0,.6),
@@ -462,7 +642,9 @@ button{
 
     url("one.jpg");
 
+
     background-size:cover;
+
 
 }
 
@@ -470,15 +652,21 @@ button{
 
 .booking-box{
 
-    width:90%;
-
-    max-width:600px;
 
     background:white;
 
+
+    width:90%;
+
+
+    max-width:600px;
+
+
     padding:40px;
 
-    border-radius:20px;
+
+    border-radius:25px;
+
 
 }
 
@@ -488,20 +676,27 @@ button{
 
 
 
-/* ================= LOGIN ================= */
+
+/* ================= LOGIN SIGNUP ================= */
 
 
 .auth-page{
 
+
     min-height:100vh;
+
 
     display:flex;
 
+
     justify-content:center;
+
 
     align-items:center;
 
+
     background:
+
 
     linear-gradient(
     rgba(0,0,0,.6),
@@ -510,34 +705,49 @@ button{
 
     url("one.jpg");
 
+
     background-size:cover;
 
-}
 
+}
 
 
 
 .auth-box{
 
-    width:90%;
-
-    max-width:400px;
 
     background:white;
 
+
+    width:90%;
+
+
+    max-width:420px;
+
+
     padding:40px;
 
-    border-radius:20px;
+
+    border-radius:25px;
+
 
     text-align:center;
+
+
+    animation:fadeUp 1s;
+
 
 }
 
 
 
-.auth-box input{
 
-    border-radius:30px;
+
+.auth-box h1{
+
+
+    margin-bottom:20px;
+
 
 }
 
@@ -545,11 +755,87 @@ button{
 
 .auth-box a{
 
+
     color:#ff6b6b;
+
 
     text-decoration:none;
 
+
 }
+
+
+
+
+
+
+/* ================= BANNERS ================= */
+
+
+.offer-banner,
+.booking-banner{
+
+
+    margin:50px 8%;
+
+
+    padding:60px 20px;
+
+
+    text-align:center;
+
+
+    color:white;
+
+
+    border-radius:25px;
+
+
+
+    background:
+
+    linear-gradient(
+    rgba(0,0,0,.5),
+    rgba(0,0,0,.5)
+    ),
+
+    url("one.jpg");
+
+    background-size:cover;
+
+
+}
+
+
+
+
+.offer-banner a,
+.booking-banner a{
+
+
+    display:inline-block;
+
+
+    margin-top:20px;
+
+
+    background:#ff6b6b;
+
+
+    padding:12px 30px;
+
+
+    border-radius:30px;
+
+
+    color:white;
+
+
+    text-decoration:none;
+
+
+}
+
 
 
 
@@ -561,15 +847,22 @@ button{
 
 footer{
 
+
     background:#111;
+
 
     color:white;
 
+
     text-align:center;
+
 
     padding:20px;
 
+
 }
+
+
 
 
 
@@ -579,15 +872,17 @@ footer{
 /* ================= ANIMATION ================= */
 
 
-@keyframes show{
+@keyframes fadeUp{
+
 
 from{
 
 opacity:0;
 
-transform:translateY(40px);
+transform:translateY(50px);
 
 }
+
 
 to{
 
@@ -597,7 +892,9 @@ transform:translateY(0);
 
 }
 
+
 }
+
 
 
 
@@ -610,9 +907,12 @@ transform:translateY(0);
 @media(max-width:768px){
 
 
+
 .navbar{
 
+
     padding:15px;
+
 
 }
 
@@ -620,7 +920,9 @@ transform:translateY(0);
 
 .nav-links{
 
+
     display:none;
+
 
 }
 
@@ -628,7 +930,9 @@ transform:translateY(0);
 
 .logo{
 
+
     font-size:20px;
+
 
 }
 
@@ -636,9 +940,12 @@ transform:translateY(0);
 
 .nav-buttons a{
 
+
     padding:8px;
 
+
     font-size:12px;
+
 
 }
 
@@ -646,7 +953,19 @@ transform:translateY(0);
 
 .hero h1{
 
+
     font-size:35px;
+
+
+}
+
+
+
+.hero h4{
+
+
+    font-size:12px;
+
 
 }
 
@@ -654,7 +973,9 @@ transform:translateY(0);
 
 .contact-section{
 
+
     grid-template-columns:1fr;
+
 
 }
 
@@ -662,9 +983,12 @@ transform:translateY(0);
 
 .page-banner h1{
 
+
     font-size:35px;
 
+
 }
+
 
 
 }
