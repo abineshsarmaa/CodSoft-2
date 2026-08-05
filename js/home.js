@@ -11,38 +11,26 @@
 
 window.addEventListener("load",()=>{
 
+    const loader = document.querySelector(".loader");
 
-const loader=document.querySelector(".loader");
+    if(loader){
 
+        setTimeout(()=>{
 
-if(loader){
+            loader.style.opacity="0";
 
+            setTimeout(()=>{
 
-setTimeout(()=>{
+                loader.style.display="none";
 
-
-loader.style.opacity="0";
-
-
-setTimeout(()=>{
-
-
-loader.style.display="none";
+            },500);
 
 
-},500);
+        },1000);
 
-
-
-},1000);
-
-
-}
-
-
+    }
 
 });
-
 
 
 
@@ -54,46 +42,41 @@ loader.style.display="none";
 // ===============================
 
 
-const menuBtn=document.getElementById("menuBtn");
+const menuBtn = document.getElementById("menuBtn");
 
-const navLinks=document.getElementById("navLinks");
+const navLinks = document.getElementById("navLinks");
 
 
 
-if(menuBtn){
+if(menuBtn && navLinks){
 
 
 menuBtn.addEventListener("click",()=>{
 
 
-navLinks.classList.toggle("active");
+    navLinks.classList.toggle("active");
 
 
-
-const icon=menuBtn.querySelector("i");
-
+    const icon = menuBtn.querySelector("i");
 
 
-if(navLinks.classList.contains("active")){
+    if(navLinks.classList.contains("active")){
 
 
-icon.classList.remove("fa-bars");
+        icon.classList.remove("fa-bars");
 
-icon.classList.add("fa-xmark");
-
-
-}
-
-else{
+        icon.classList.add("fa-xmark");
 
 
-icon.classList.remove("fa-xmark");
-
-icon.classList.add("fa-bars");
+    }else{
 
 
-}
+        icon.classList.remove("fa-xmark");
 
+        icon.classList.add("fa-bars");
+
+
+    }
 
 
 });
@@ -101,6 +84,31 @@ icon.classList.add("fa-bars");
 
 }
 
+
+
+
+
+
+// Close mobile menu after click
+
+
+document.querySelectorAll(".nav-links a").forEach(link=>{
+
+
+    link.addEventListener("click",()=>{
+
+
+        if(navLinks){
+
+            navLinks.classList.remove("active");
+
+        }
+
+
+    });
+
+
+});
 
 
 
@@ -113,7 +121,8 @@ icon.classList.add("fa-bars");
 // ===============================
 
 
-const themeBtn=document.getElementById("themeBtn");
+const themeBtn = document.getElementById("themeBtn");
+
 
 
 if(themeBtn){
@@ -122,33 +131,37 @@ if(themeBtn){
 themeBtn.addEventListener("click",()=>{
 
 
-document.body.classList.toggle("dark");
+    document.body.classList.toggle("dark-mode");
+
+
+    const icon = themeBtn.querySelector("i");
 
 
 
-let icon=themeBtn.querySelector("i");
+    if(document.body.classList.contains("dark-mode")){
+
+
+        icon.classList.remove("fa-moon");
+
+        icon.classList.add("fa-sun");
+
+
+        localStorage.setItem("theme","dark");
 
 
 
-if(document.body.classList.contains("dark")){
+    }else{
 
 
-icon.classList.remove("fa-moon");
+        icon.classList.remove("fa-sun");
 
-icon.classList.add("fa-sun");
-
-
-}
-
-else{
+        icon.classList.add("fa-moon");
 
 
-icon.classList.remove("fa-sun");
-
-icon.classList.add("fa-moon");
+        localStorage.setItem("theme","light");
 
 
-}
+    }
 
 
 
@@ -157,6 +170,47 @@ icon.classList.add("fa-moon");
 
 }
 
+
+
+
+
+
+
+// Remember Theme
+
+
+window.addEventListener("load",()=>{
+
+
+const savedTheme = localStorage.getItem("theme");
+
+
+
+const icon = document.querySelector("#themeBtn i");
+
+
+
+if(savedTheme==="dark"){
+
+
+document.body.classList.add("dark-mode");
+
+
+
+if(icon){
+
+icon.classList.remove("fa-moon");
+
+icon.classList.add("fa-sun");
+
+}
+
+
+}
+
+
+
+});
 
 
 
@@ -170,26 +224,27 @@ icon.classList.add("fa-moon");
 // ===============================
 
 
-const cards=document.querySelectorAll(
-".card,.review,.gallery-box img"
+const animatedItems = document.querySelectorAll(
+
+".card, .review, .gallery-box img, .booking-banner"
+
 );
 
 
 
-const observer=new IntersectionObserver((entries)=>{
+const observer = new IntersectionObserver((entries)=>{
 
 
 entries.forEach(entry=>{
 
 
-if(entry.isIntersecting){
+    if(entry.isIntersecting){
 
 
-entry.target.classList.add("show");
+        entry.target.classList.add("show");
 
 
-}
-
+    }
 
 
 });
@@ -198,21 +253,20 @@ entry.target.classList.add("show");
 },{
 
 
-threshold:.2
+threshold:0.2
 
 
 });
 
 
 
-
-cards.forEach(card=>{
-
-
-card.classList.add("hidden");
+animatedItems.forEach(item=>{
 
 
-observer.observe(card);
+    item.classList.add("hidden");
+
+
+    observer.observe(item);
 
 
 });
@@ -228,27 +282,26 @@ observer.observe(card);
 // ===============================
 
 
-const buttons=document.querySelectorAll("a,button");
+const buttons = document.querySelectorAll("a,button");
 
 
 
-buttons.forEach(btn=>{
+buttons.forEach(button=>{
 
 
-btn.addEventListener("click",()=>{
+button.addEventListener("click",()=>{
 
 
-btn.style.transform="scale(.95)";
+    button.style.transform="scale(.95)";
 
 
-setTimeout(()=>{
+    setTimeout(()=>{
 
 
-btn.style.transform="";
+        button.style.transform="";
 
 
-},150);
-
+    },150);
 
 
 });
@@ -263,20 +316,21 @@ btn.style.transform="";
 
 
 // ===============================
-// FOOTER YEAR
+// FOOTER YEAR UPDATE
 // ===============================
 
 
-const footer=document.querySelector("footer p");
+const footer = document.querySelector("footer p");
 
 
 
 if(footer){
 
 
-footer.innerHTML=
+footer.innerHTML =
 
-"© "+new Date().getFullYear()+
+"© " + new Date().getFullYear() +
+
 " Epic Journeys Travel | Developed by Abinesh Sarma";
 
 
