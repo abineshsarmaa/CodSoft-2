@@ -6,51 +6,90 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Book Your Trip - Epic Journeys</title>
+<title>Book Now | Epic Journeys</title>
 
 <link rel="stylesheet" href="style.css">
 
 </head>
 
 
+
 <body>
 
 
-<section class="form-page">
+<nav>
+
+<div class="logo">
+EPIC JOURNEYS
+</div>
 
 
-<div class="form-box booking-box">
+<div class="menu">
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="offers.html">Offers</a>
+<a href="contact.html">Contact</a>
+
+</div>
 
 
-<h2>
+</nav>
+
+
+
+
+
+
+
+<section class="page-banner">
+
+
+<h1>
 Book Your Trip
-</h2>
+</h1>
+
+
+<p>
+Fill the form and start your journey.
+</p>
+
+
+</section>
 
 
 
-<form action="mailto:abineshsarmaa@outlook.com" method="post" enctype="text/plain">
 
 
 
-<input 
-type="text" 
+
+<section class="booking-section">
+
+
+<div class="booking-box">
+
+
+<form action="mailto:abineshsarmaa@outlook.com"
+method="post"
+enctype="text/plain">
+
+
+
+<input type="text"
 name="Name"
 placeholder="Full Name"
 required>
 
 
 
-<input 
-type="email"
+<input type="email"
 name="Email"
 placeholder="Email Address"
 required>
 
 
 
-
-<input 
-type="tel"
+<input type="tel"
 name="Phone"
 placeholder="Phone Number"
 required>
@@ -58,60 +97,45 @@ required>
 
 
 
+<select name="Package">
 
-<select name="Destination" required>
-
-<option value="">
-Select Destination
+<option>
+Select Package
 </option>
 
 <option>
-Switzerland
+International Tour
 </option>
 
 <option>
-Maldives
+Family Package
 </option>
 
 <option>
-Dubai
+Adventure Trip
 </option>
-
-<option>
-India Tour
-</option>
-
 
 </select>
 
 
 
 
-
-<input
-type="date"
+<input type="date"
 name="Travel Date"
 required>
 
 
 
-
-
-
 <textarea
 name="Message"
-placeholder="Your Message">
+placeholder="Special Request">
 </textarea>
 
 
 
 
-
-
-<button type="submit">
-
-Submit Booking
-
+<button>
+Confirm Booking
 </button>
 
 
@@ -119,21 +143,24 @@ Submit Booking
 </form>
 
 
-<br>
-
-
-<a href="index.html" class="back-home">
-
-← Back To Home
-
-</a>
-
-
-
 </div>
 
 
 </section>
+
+
+
+
+
+
+<footer>
+
+<p>
+© 2026 Epic Journeys Travel.
+Developed by Abinesh Sarma.
+</p>
+
+</footer>
 
 
 
