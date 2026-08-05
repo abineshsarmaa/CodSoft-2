@@ -1,6 +1,6 @@
 /* =====================================
    EPIC JOURNEYS HOME CSS
-   PREMIUM ANIMATED DESIGN
+   PREMIUM TRAVEL DESIGN
 ===================================== */
 
 
@@ -8,38 +8,29 @@
 
 
 *{
-
-margin:0;
-
-padding:0;
-
-box-sizing:border-box;
-
-font-family:'Poppins',sans-serif;
-
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
 
 
 
 html{
-
-scroll-behavior:smooth;
-
+    scroll-behavior:smooth;
 }
 
 
 
 body{
 
-background:#f5f5f5;
+    background:#f5f5f5;
 
-color:#222;
+    color:#222;
 
-transition:.4s;
+    transition:.4s;
 
 }
-
-
 
 
 
@@ -50,35 +41,23 @@ transition:.4s;
 
 .loader{
 
-
 position:fixed;
 
 inset:0;
 
-
 background:#111;
-
 
 color:white;
 
-
 display:flex;
-
 
 justify-content:center;
 
-
 align-items:center;
-
 
 flex-direction:column;
 
-
 z-index:9999;
-
-
-animation:loaderHide 2s forwards;
-
 
 }
 
@@ -86,59 +65,25 @@ animation:loaderHide 2s forwards;
 
 .loader i{
 
-
 font-size:60px;
-
 
 color:#ff6b6b;
 
-
-animation:fly 1.5s infinite;
-
+animation:plane 1.5s infinite;
 
 }
 
 
 
-@keyframes fly{
-
+@keyframes plane{
 
 50%{
 
-transform:translateY(-20px) rotate(-10deg);
+transform:translateY(-20px) rotate(-15deg);
 
 }
 
-
 }
-
-
-
-
-@keyframes loaderHide{
-
-
-0%,80%{
-
-opacity:1;
-
-}
-
-
-100%{
-
-opacity:0;
-
-visibility:hidden;
-
-}
-
-
-}
-
-
-
-
 
 
 
@@ -174,6 +119,7 @@ left:0;
 right:0;
 
 
+
 z-index:1000;
 
 
@@ -204,18 +150,13 @@ border-radius:50px;
 
 .logo{
 
-
 color:white;
-
 
 text-decoration:none;
 
-
 font-size:28px;
 
-
 font-weight:700;
-
 
 }
 
@@ -223,19 +164,15 @@ font-weight:700;
 
 .logo i{
 
-
 color:#ff6b6b;
 
-
-animation:plane 2s infinite;
-
+animation:logoMove 2s infinite;
 
 }
 
 
 
-
-@keyframes plane{
+@keyframes logoMove{
 
 
 50%{
@@ -243,7 +180,6 @@ animation:plane 2s infinite;
 transform:rotate(-15deg) translateY(-5px);
 
 }
-
 
 }
 
@@ -253,12 +189,9 @@ transform:rotate(-15deg) translateY(-5px);
 
 .nav-links{
 
-
 display:flex;
 
-
 gap:30px;
-
 
 }
 
@@ -266,15 +199,11 @@ gap:30px;
 
 .nav-links a{
 
-
 color:white;
-
 
 text-decoration:none;
 
-
 transition:.3s;
-
 
 }
 
@@ -282,13 +211,9 @@ transition:.3s;
 
 .nav-links a:hover{
 
-
 color:#ff6b6b;
 
-
 }
-
-
 
 
 
@@ -298,15 +223,11 @@ color:#ff6b6b;
 
 display:flex;
 
-
 align-items:center;
-
 
 gap:8px;
 
-
 }
-
 
 
 
@@ -332,7 +253,6 @@ font-size:14px;
 
 
 }
-
 
 
 
@@ -369,7 +289,6 @@ cursor:pointer;
 
 
 
-
 /* ===============================
  HERO
 ================================ */
@@ -379,7 +298,6 @@ cursor:pointer;
 
 
 min-height:100vh;
-
 
 
 background:
@@ -399,9 +317,7 @@ background-size:cover;
 background-position:center;
 
 
-
 }
-
 
 
 
@@ -414,11 +330,10 @@ min-height:100vh;
 display:flex;
 
 
-align-items:center;
-
-
 justify-content:center;
 
+
+align-items:center;
 
 
 text-align:center;
@@ -435,28 +350,26 @@ padding:20px;
 
 
 
-
 .hero-content{
 
 
-animation:hero .9s;
-
+animation:heroShow 1s;
 
 }
 
 
 
-@keyframes hero{
+@keyframes heroShow{
 
 
 from{
-
 
 opacity:0;
 
 transform:translateY(60px);
 
 }
+
 
 
 to{
@@ -467,17 +380,15 @@ transform:translateY(0);
 
 }
 
-
 }
+
 
 
 
 
 .hero h4{
 
-
 letter-spacing:3px;
-
 
 }
 
@@ -485,27 +396,19 @@ letter-spacing:3px;
 
 .hero h1{
 
-
 font-size:65px;
-
 
 margin:20px 0;
 
-
 }
-
 
 
 
 .hero p{
 
-
 font-size:18px;
 
-
 }
-
-
 
 
 
@@ -557,10 +460,21 @@ transform:translateY(-8px);
 
 
 
-
 /* ===============================
  COMMON SECTION
 ================================ */
+
+
+.services,
+.gallery,
+.reviews{
+
+
+padding:90px 8%;
+
+
+}
+
 
 
 section h2{
@@ -573,22 +487,6 @@ font-size:40px;
 
 
 margin-bottom:50px;
-
-
-}
-
-
-
-
-
-
-
-.services,
-.gallery,
-.reviews{
-
-
-padding:90px 8%;
 
 
 }
@@ -613,6 +511,7 @@ gap:30px;
 
 
 }
+
 
 
 
@@ -655,6 +554,7 @@ transform:translateY(-15px);
 
 
 
+
 .card i{
 
 
@@ -665,6 +565,7 @@ color:#ff6b6b;
 
 
 }
+
 
 
 
@@ -691,7 +592,6 @@ gap:20px;
 
 
 }
-
 
 
 
@@ -732,6 +632,7 @@ transform:scale(1.05);
 
 
 
+
 /* ===============================
  BOOKING BANNER
 ================================ */
@@ -740,19 +641,20 @@ transform:scale(1.05);
 .booking-banner{
 
 
-padding:80px 20px;
-
-
-text-align:center;
-
-
 background:#111;
 
 
 color:white;
 
 
+text-align:center;
+
+
+padding:80px 20px;
+
+
 }
+
 
 
 
@@ -781,6 +683,7 @@ text-decoration:none;
 
 
 }
+
 
 
 
@@ -825,10 +728,10 @@ border-radius:50%;
 display:flex;
 
 
-justify-content:center;
-
-
 align-items:center;
+
+
+justify-content:center;
 
 
 font-size:35px;
@@ -840,21 +743,7 @@ text-decoration:none;
 z-index:999;
 
 
-animation:pulse 1.5s infinite;
-
-
-}
-
-
-
-@keyframes pulse{
-
-
-70%{
-
-box-shadow:0 0 0 20px transparent;
-
-}
+animation:whatsapp 1.5s infinite;
 
 
 }
@@ -862,7 +751,61 @@ box-shadow:0 0 0 20px transparent;
 
 
 
+@keyframes whatsapp{
 
+
+50%{
+
+transform:scale(1.15);
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ===============================
+ DARK MODE
+================================ */
+
+
+body.dark{
+
+
+background:#111;
+
+color:white;
+
+}
+
+
+
+body.dark .card,
+body.dark .review{
+
+
+background:#222;
+
+color:white;
+
+}
+
+
+
+
+
+
+
+/* ===============================
+ FOOTER
+================================ */
 
 
 footer{
@@ -890,43 +833,6 @@ padding:25px;
 
 
 /* ===============================
- DARK MODE
-================================ */
-
-
-body.dark{
-
-
-background:#111;
-
-
-color:white;
-
-
-}
-
-
-
-body.dark .card,
-body.dark .review{
-
-
-background:#222;
-
-
-color:white;
-
-
-}
-
-
-
-
-
-
-
-
-/* ===============================
  MOBILE
 ================================ */
 
@@ -937,7 +843,7 @@ color:white;
 .navbar{
 
 
-width:95%;
+width:96%;
 
 
 padding:12px;
@@ -949,9 +855,7 @@ padding:12px;
 
 .logo{
 
-
 font-size:18px;
-
 
 }
 
@@ -960,21 +864,57 @@ font-size:18px;
 .nav-links{
 
 
+position:absolute;
+
+
+top:70px;
+
+
+left:0;
+
+
+width:100%;
+
+
+background:#111;
+
+
+flex-direction:column;
+
+
+text-align:center;
+
+
+padding:20px;
+
+
 display:none;
+
+
+border-radius:20px;
 
 
 }
 
 
 
+.nav-links.active{
+
+
+display:flex;
+
+
+}
+
+
 
 .nav-buttons a{
 
 
-padding:7px 8px;
-
-
 font-size:10px;
+
+
+padding:7px 9px;
 
 
 }
@@ -995,8 +935,6 @@ height:32px;
 
 
 
-
-
 .hero h1{
 
 
@@ -1014,7 +952,6 @@ font-size:14px;
 
 
 }
-
 
 
 
@@ -1051,7 +988,6 @@ font-size:30px;
 
 
 }
-
 
 
 }
