@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
 
 *{
     margin:0;
@@ -8,44 +9,52 @@
 }
 
 
-html{
-    scroll-behavior:smooth;
-}
-
-
 body{
     background:#f5f5f5;
-    color:#333;
 }
 
 
 
-/* ================= HEADER ================= */
-
+/* HOME BACKGROUND */
 
 header{
 
     min-height:100vh;
 
     background:
-    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    linear-gradient(
+    rgba(0,0,0,.55),
+    rgba(0,0,0,.55)
+    ),
     url("one.jpg");
 
     background-size:cover;
     background-position:center;
 
+    animation:bgMove 12s infinite alternate;
+
 }
 
 
 
-/* ================= NAVBAR ================= */
+@keyframes bgMove{
 
+    from{
+        background-position:left center;
+    }
+
+    to{
+        background-position:right center;
+    }
+
+}
+
+
+
+
+/* NAVBAR */
 
 nav{
-
-    width:100%;
-
-    padding:20px 8%;
 
     display:flex;
 
@@ -53,11 +62,13 @@ nav{
 
     align-items:center;
 
+    padding:20px 8%;
+
     position:fixed;
 
-    top:0;
+    width:100%;
 
-    background:rgba(0,0,0,.35);
+    background:rgba(0,0,0,.3);
 
     backdrop-filter:blur(10px);
 
@@ -71,9 +82,11 @@ nav{
 
     color:white;
 
-    font-size:28px;
+    font-size:30px;
 
-    font-weight:bold;
+    font-weight:700;
+
+    animation:slideLeft 1s;
 
 }
 
@@ -95,7 +108,7 @@ nav{
 
     text-decoration:none;
 
-    font-size:17px;
+    transition:.4s;
 
 }
 
@@ -105,17 +118,10 @@ nav{
 
     color:#ff6b6b;
 
-}
-
-
-
-.account-buttons{
-
-    display:flex;
-
-    gap:10px;
+    transform:scale(1.1);
 
 }
+
 
 
 
@@ -127,32 +133,30 @@ nav{
 
     padding:10px 18px;
 
-    border-radius:5px;
+    margin:5px;
 
     text-decoration:none;
 
-}
+    border-radius:30px;
 
-
-
-.menu-btn{
-
-    display:none;
-
-    color:white;
-
-    font-size:28px;
+    transition:.4s;
 
 }
 
 
 
+.account-buttons a:hover{
+
+    transform:scale(1.1);
+
+    background:crimson;
+
+}
 
 
 
 
-/* ================= HERO ================= */
-
+/* HERO ANIMATION */
 
 
 .hero{
@@ -171,7 +175,17 @@ nav{
 
     color:white;
 
-    padding:20px;
+    animation:fadeUp 1.5s;
+
+}
+
+
+
+.hero h1{
+
+    font-size:60px;
+
+    animation:zoom 1.5s;
 
 }
 
@@ -185,27 +199,11 @@ nav{
 
 
 
-.hero h1{
-
-    font-size:60px;
-
-    margin:20px 0;
-
-}
-
-
-
-.hero p{
-
-    max-width:650px;
-
-}
-
-
-
 .hero a{
 
     margin-top:30px;
+
+    padding:15px 35px;
 
     background:#ff6b6b;
 
@@ -213,9 +211,17 @@ nav{
 
     text-decoration:none;
 
-    padding:14px 30px;
+    border-radius:30px;
 
-    border-radius:5px;
+    transition:.4s;
+
+}
+
+
+
+.hero a:hover{
+
+    transform:scale(1.15);
 
 }
 
@@ -224,280 +230,156 @@ nav{
 
 
 
-/* ================= SECTION ================= */
-
-
-section{
-
-    padding:80px 8%;
-
-}
-
-
-
-h2{
-
-    text-align:center;
-
-    font-size:35px;
-
-    margin-bottom:40px;
-
-}
-
-
-
-
-
-
-/* ================= CARDS ================= */
-
-
-
-.cards{
-
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-
-    gap:25px;
-
-}
-
+/* CARDS */
 
 
 .card{
 
-    background:white;
-
-    border-radius:10px;
-
-    overflow:hidden;
-
-    box-shadow:0 5px 15px #ddd;
+    transition:.5s;
 
 }
+
+
+
+.card:hover{
+
+    transform:translateY(-15px) scale(1.03);
+
+    box-shadow:0 15px 30px #aaa;
+
+}
+
 
 
 
 .card img{
 
-    width:100%;
-
-    height:220px;
-
-    object-fit:cover;
+    transition:.5s;
 
 }
 
 
 
-.card h3,
-.card p{
+.card:hover img{
+
+    transform:scale(1.1);
+
+}
+
+
+
+
+
+
+/* BUTTON */
+
+
+button{
+
+    transition:.4s;
+
+}
+
+
+button:hover{
+
+    transform:scale(1.05);
+
+}
+
+
+
+
+
+
+/* LOGIN SIGNUP GLASS DESIGN */
+
+
+.auth-page,
+.form-page{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:
+
+    linear-gradient(
+    rgba(0,0,0,.5),
+    rgba(0,0,0,.5)
+    ),
+
+    url("one.jpg");
+
+    background-size:cover;
+
+}
+
+
+
+.auth-box,
+.form-box{
+
+    width:90%;
+
+    max-width:420px;
+
+    padding:40px;
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:20px;
+
+    color:white;
+
+    animation:zoom 1s;
+
+}
+
+
+
+.auth-box input,
+.form-box input,
+.form-box textarea,
+.form-box select{
+
+    width:100%;
 
     padding:15px;
 
-}
+    margin:10px 0;
 
+    border:none;
 
-
-
-
-
-
-/* ================= OFFERS ================= */
-
-
-.offer-box{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-
-gap:20px;
-
-}
-
-
-
-.offer-box div{
-
-background:#ff6b6b;
-
-color:white;
-
-padding:30px;
-
-text-align:center;
-
-border-radius:10px;
+    border-radius:30px;
 
 }
 
 
 
 
-
-
-
-/* ================= CONTACT ================= */
-
-
-.contact{
-
-text-align:center;
-
-}
-
-
-
-.contact-btn{
-
-display:inline-block;
-
-background:#ff6b6b;
-
-color:white;
-
-padding:12px 25px;
-
-margin:10px;
-
-border-radius:5px;
-
-text-decoration:none;
-
-}
-
-
-
-
-
-
-
-/* ================= FORM PAGES ================= */
-
-
-.form-page{
-
-min-height:100vh;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-background:
-
-linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
-url("one.jpg");
-
-background-size:cover;
-
-}
-
-
-
-.form-box{
-
-background:white;
-
-padding:40px;
-
-width:90%;
-
-max-width:450px;
-
-border-radius:10px;
-
-text-align:center;
-
-}
-
-
-
-.form-box h2{
-
-margin-bottom:25px;
-
-}
-
-
-
-.form-box input,
-.form-box select,
-.form-box textarea{
-
-width:100%;
-
-padding:12px;
-
-margin:10px 0;
-
-border:1px solid #ccc;
-
-border-radius:5px;
-
-}
-
-
-
-.form-box textarea{
-
-height:120px;
-
-resize:none;
-
-}
-
-
-
+.auth-box button,
 .form-box button{
 
-width:100%;
+    width:100%;
 
-padding:12px;
+    padding:15px;
 
-background:#ff6b6b;
+    border:none;
 
-color:white;
+    border-radius:30px;
 
-border:none;
+    background:#ff6b6b;
 
-border-radius:5px;
+    color:white;
 
-cursor:pointer;
-
-font-size:16px;
-
-}
-
-
-
-.form-box button:hover{
-
-background:crimson;
-
-}
-
-
-
-.form-box a{
-
-color:#ff6b6b;
-
-text-decoration:none;
-
-}
-
-
-
-.back-home{
-
-display:inline-block;
-
-margin-top:15px;
+    cursor:pointer;
 
 }
 
@@ -505,19 +387,74 @@ margin-top:15px;
 
 
 
+/* ANIMATION */
 
-/* ================= FOOTER ================= */
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(50px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
 
 
-footer{
 
-background:#111;
 
-color:white;
+@keyframes zoom{
 
-text-align:center;
+from{
 
-padding:20px;
+opacity:0;
+
+transform:scale(.7);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:scale(1);
+
+}
+
+}
+
+
+
+
+@keyframes slideLeft{
+
+from{
+
+transform:translateX(-100px);
+
+opacity:0;
+
+}
+
+
+to{
+
+transform:translateX(0);
+
+opacity:1;
+
+}
 
 }
 
@@ -525,85 +462,10 @@ padding:20px;
 
 
 
-
-
-
-/* ================= MOBILE ================= */
+/* MOBILE */
 
 
 @media(max-width:768px){
-
-
-nav{
-
-padding:20px;
-
-}
-
-
-
-.logo{
-
-font-size:22px;
-
-}
-
-
-
-.menu{
-
-position:absolute;
-
-top:75px;
-
-left:-100%;
-
-width:100%;
-
-background:#111;
-
-flex-direction:column;
-
-text-align:center;
-
-padding:20px;
-
-transition:.4s;
-
-}
-
-
-
-.menu.active{
-
-left:0;
-
-}
-
-
-
-.menu a{
-
-padding:15px;
-
-}
-
-
-
-.account-buttons{
-
-display:none;
-
-}
-
-
-
-.menu-btn{
-
-display:block;
-
-}
-
 
 
 .hero h1{
@@ -613,13 +475,25 @@ font-size:35px;
 }
 
 
+.menu{
 
-.hero span{
-
-font-size:14px;
+display:none;
 
 }
 
+
+.account-buttons{
+
+display:none;
+
+}
+
+
+.logo{
+
+font-size:22px;
+
+}
 
 
 }
