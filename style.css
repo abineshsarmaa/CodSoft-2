@@ -1,6 +1,6 @@
 /* ===============================
-   EPIC JOURNEYS TRAVEL CSS
-   PART A
+   EPIC JOURNEYS TRAVEL
+   FINAL STYLE CSS
 ================================ */
 
 
@@ -26,33 +26,73 @@ body{
 
 
 
+
+/* ================= HEADER ================= */
+
+
+.home-header{
+
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,.55),
+    rgba(0,0,0,.55)
+    ),
+    url("one.jpg");
+
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+
+
+
+
+
+
 /* ================= NAVBAR ================= */
 
 
 .navbar{
 
     width:100%;
+
     padding:20px 8%;
 
     display:flex;
+
     justify-content:space-between;
+
     align-items:center;
 
+
     position:fixed;
+
     top:0;
 
-    z-index:999;
+    left:0;
 
-    background:rgba(0,0,0,.45);
+    z-index:1000;
+
+
+    background:rgba(0,0,0,.35);
 
     backdrop-filter:blur(10px);
 
 }
 
 
+
+
 .logo{
 
     color:white;
+
+    text-decoration:none;
 
     font-size:28px;
 
@@ -87,6 +127,8 @@ body{
 
     text-decoration:none;
 
+    font-size:16px;
+
     transition:.3s;
 
 }
@@ -102,13 +144,14 @@ body{
 
 
 
+
 .nav-buttons a{
 
     color:white;
 
-    background:#ff6b6b;
-
     text-decoration:none;
+
+    background:#ff6b6b;
 
     padding:10px 18px;
 
@@ -124,7 +167,7 @@ body{
 
 .nav-buttons a:hover{
 
-    background:crimson;
+    background:#e63946;
 
 }
 
@@ -134,12 +177,222 @@ body{
 
 
 
-/* ================= HOME ================= */
+/* ================= MOBILE MENU ICON ================= */
 
 
-.home-header{
+.menu-icon{
+
+    display:none;
+
+    color:white;
+
+    font-size:25px;
+
+    cursor:pointer;
+
+}
+
+
+
+
+
+
+
+/* ================= HERO ================= */
+
+
+.hero{
 
     min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    color:white;
+
+    padding:20px;
+
+}
+
+
+
+
+.hero-content{
+
+    animation:fade 1.5s;
+
+}
+
+
+
+.hero h4{
+
+    letter-spacing:5px;
+
+    font-size:18px;
+
+}
+
+
+
+.hero h1{
+
+    font-size:65px;
+
+    line-height:1.2;
+
+    margin:20px 0;
+
+}
+
+
+
+.hero p{
+
+    font-size:18px;
+
+    max-width:650px;
+
+}
+
+
+
+
+
+.hero-buttons a{
+
+    display:inline-block;
+
+    margin:25px 8px;
+
+    padding:14px 35px;
+
+    background:#ff6b6b;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:30px;
+
+    transition:.4s;
+
+}
+
+
+
+.hero-buttons a:hover{
+
+    transform:translateY(-8px);
+
+    background:#e63946;
+
+}
+
+
+
+
+
+
+
+/* ================= SERVICES ================= */
+
+
+.services{
+
+    padding:80px 8%;
+
+    text-align:center;
+
+}
+
+
+
+.services h2{
+
+    font-size:40px;
+
+    margin-bottom:40px;
+
+}
+
+
+
+
+.service-container{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+}
+
+
+
+.service-card{
+
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px #ddd;
+
+    transition:.4s;
+
+}
+
+
+
+.service-card:hover{
+
+    transform:translateY(-15px);
+
+}
+
+
+
+.service-card i{
+
+    font-size:45px;
+
+    color:#ff6b6b;
+
+}
+
+
+
+
+
+
+
+
+/* ================= BANNERS ================= */
+
+
+.offer-banner,
+.booking-banner{
+
+
+    margin:50px 8%;
+
+    padding:60px 20px;
+
+    text-align:center;
+
+    color:white;
+
+    border-radius:25px;
 
 
     background:
@@ -154,431 +407,29 @@ body{
 
     background-size:cover;
 
-    background-position:center;
-
-
 }
 
 
 
-
-.hero{
-
-
-    min-height:100vh;
-
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-
-    text-align:center;
-
-
-    color:white;
-
-
-    padding:20px;
-
-
-}
-
-
-
-.hero-content{
-
-    animation:fade 1.5s;
-
-}
-
-
-
-.hero h1{
-
-
-    font-size:65px;
-
-    margin:20px 0;
-
-
-}
-
-
-
-.hero p{
-
-    font-size:18px;
-
-}
-
-
-
-
-.hero-buttons a{
+.offer-banner a,
+.booking-banner a{
 
 
     display:inline-block;
-
-
-    margin:20px 5px;
-
-
-    padding:14px 35px;
-
-
-    background:#ff6b6b;
-
-
-    color:white;
-
-
-    text-decoration:none;
-
-
-    border-radius:30px;
-
-
-    transition:.4s;
-
-
-}
-
-
-
-.hero-buttons a:hover{
-
-    transform:translateY(-8px);
-
-}
-
-
-
-
-
-
-
-/* ================= PAGE BANNER ================= */
-
-
-.page-banner{
-
-
-    height:60vh;
-
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-
-    flex-direction:column;
-
-
-    color:white;
-
-    text-align:center;
-
-
-    background:
-
-    linear-gradient(
-    rgba(0,0,0,.6),
-    rgba(0,0,0,.6)
-    ),
-
-    url("one.jpg");
-
-
-    background-size:cover;
-
-
-}
-
-
-
-.page-banner h1{
-
-    font-size:50px;
-
-}
-
-
-
-
-
-
-
-/* ================= CARDS ================= */
-
-
-.services,
-.about-section,
-.offer-container{
-
-
-    padding:80px 8%;
-
-
-    display:grid;
-
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(260px,1fr));
-
-
-    gap:30px;
-
-
-}
-
-
-
-
-.service-card,
-.about-card,
-.offer-card,
-.contact-card{
-
-
-    background:white;
-
-
-    padding:35px;
-
-
-    border-radius:20px;
-
-
-    text-align:center;
-
-
-    box-shadow:0 10px 30px #ddd;
-
-
-    transition:.4s;
-
-
-}
-
-
-
-.service-card:hover,
-.about-card:hover,
-.offer-card:hover,
-.contact-card:hover{
-
-
-    transform:translateY(-12px);
-
-
-}
-
-
-
-.service-card i,
-.about-card i,
-.offer-card i{
-
-
-    font-size:45px;
-
-    color:#ff6b6b;
-
-}
-
-
-
-
-
-
-
-/* ================= OFFER ================= */
-
-
-.offer-card h2{
-
-    color:#ff6b6b;
-
-}
-
-
-.offer-card a{
-
-
-    display:inline-block;
-
 
     margin-top:20px;
 
-
-    padding:12px 25px;
-
+    padding:12px 30px;
 
     background:#ff6b6b;
 
-
     color:white;
-
 
     text-decoration:none;
 
-
     border-radius:30px;
 
-
 }
-
-
-
-
-
-
-
-/* ================= CONTACT ================= */
-
-
-.contact-section{
-
-
-    padding:80px 8%;
-
-
-    display:grid;
-
-
-    grid-template-columns:1fr 1fr;
-
-
-    gap:30px;
-
-
-}
-
-
-
-input,
-textarea{
-
-
-    width:100%;
-
-
-    padding:15px;
-
-
-    margin:10px 0;
-
-
-    border-radius:10px;
-
-
-    border:1px solid #ddd;
-
-
-}
-
-
-
-textarea{
-
-    height:130px;
-
-}
-
-
-
-button{
-
-
-    width:100%;
-
-
-    padding:15px;
-
-
-    border:none;
-
-
-    background:#ff6b6b;
-
-
-    color:white;
-
-
-    border-radius:30px;
-
-
-    cursor:pointer;
-
-
-}
-
-
-
-
-
-
-
-/* ================= BOOKING ================= */
-
-
-.booking-page{
-
-
-    min-height:100vh;
-
-
-    display:flex;
-
-
-    justify-content:center;
-
-
-    align-items:center;
-
-
-    background:
-
-    linear-gradient(
-    rgba(0,0,0,.6),
-    rgba(0,0,0,.6)
-    ),
-
-    url("one.jpg");
-
-
-    background-size:cover;
-
-
-}
-
-
-
-.booking-box{
-
-
-    width:90%;
-
-
-    max-width:600px;
-
-
-    background:white;
-
-
-    padding:40px;
-
-
-    border-radius:25px;
-
-
-}
-
 
 
 
@@ -590,23 +441,23 @@ button{
 
 footer{
 
-
     background:#111;
 
     color:white;
 
-
     text-align:center;
 
-
     padding:20px;
-
 
 }
 
 
 
 
+
+
+
+/* ================= ANIMATION ================= */
 
 
 @keyframes fade{
@@ -616,7 +467,7 @@ from{
 
 opacity:0;
 
-transform:translateY(40px);
+transform:translateY(50px);
 
 }
 
@@ -632,265 +483,14 @@ transform:translateY(0);
 
 }
 
-/* ===============================
-   SIGN IN / SIGN UP DESIGN
-================================ */
 
 
-.auth-page{
 
-    min-height:100vh;
 
-    display:flex;
 
-    justify-content:center;
 
-    align-items:center;
 
-
-    background:
-
-    linear-gradient(
-    rgba(0,0,0,.65),
-    rgba(0,0,0,.65)
-    ),
-
-    url("one.jpg");
-
-
-    background-size:cover;
-
-    background-position:center;
-
-}
-
-
-
-
-.auth-box{
-
-
-    width:90%;
-
-
-    max-width:430px;
-
-
-    padding:45px;
-
-
-    background:rgba(255,255,255,0.15);
-
-
-    backdrop-filter:blur(15px);
-
-
-    border:1px solid rgba(255,255,255,.3);
-
-
-    border-radius:25px;
-
-
-    color:white;
-
-
-    text-align:center;
-
-
-    animation:loginShow 1s ease;
-
-
-
-}
-
-
-
-
-.auth-box h1{
-
-
-    font-size:35px;
-
-
-    margin-bottom:10px;
-
-
-}
-
-
-
-
-.auth-box p{
-
-
-    margin-bottom:20px;
-
-
-}
-
-
-
-
-.auth-box input{
-
-
-    width:100%;
-
-
-    padding:15px 20px;
-
-
-    margin:12px 0;
-
-
-    border:none;
-
-
-    outline:none;
-
-
-    border-radius:30px;
-
-
-    font-size:15px;
-
-
-}
-
-
-
-.auth-box input:focus{
-
-
-    box-shadow:0 0 10px #ff6b6b;
-
-
-}
-
-
-
-
-
-.auth-box button{
-
-
-    width:100%;
-
-
-    padding:15px;
-
-
-    margin-top:15px;
-
-
-    border:none;
-
-
-    border-radius:30px;
-
-
-    background:#ff6b6b;
-
-
-    color:white;
-
-
-    font-size:17px;
-
-
-    cursor:pointer;
-
-
-    transition:.4s;
-
-
-}
-
-
-
-
-.auth-box button:hover{
-
-
-    background:#e63946;
-
-
-    transform:scale(1.05);
-
-
-}
-
-
-
-
-
-.auth-box a{
-
-
-    color:#ffd1d1;
-
-
-    text-decoration:none;
-
-
-    font-weight:600;
-
-
-}
-
-
-
-.auth-box a:hover{
-
-
-    color:white;
-
-
-}
-
-
-
-
-
-@keyframes loginShow{
-
-
-from{
-
-
-opacity:0;
-
-
-transform:translateY(70px) scale(.8);
-
-
-}
-
-
-to{
-
-
-opacity:1;
-
-
-transform:translateY(0) scale(1);
-
-
-}
-
-
-}
-
-
-
-
-
-
-
-
-/* ===============================
-   MOBILE RESPONSIVE
-================================ */
+/* ================= MOBILE ================= */
 
 
 @media(max-width:768px){
@@ -899,9 +499,7 @@ transform:translateY(0) scale(1);
 
 .navbar{
 
-
-    padding:15px;
-
+    padding:15px 20px;
 
 }
 
@@ -909,11 +507,18 @@ transform:translateY(0) scale(1);
 
 .logo{
 
-
     font-size:20px;
 
+}
+
+
+
+.menu-icon{
+
+    display:block;
 
 }
+
 
 
 
@@ -923,84 +528,88 @@ transform:translateY(0) scale(1);
     display:none;
 
 
+    position:absolute;
+
+    top:70px;
+
+    left:0;
+
+    width:100%;
+
+
+    background:rgba(0,0,0,.95);
+
+
+    flex-direction:column;
+
+    text-align:center;
+
+    padding:20px;
+
+
 }
+
+
+
+
+.nav-links.active{
+
+    display:flex;
+
+}
+
+
+
+.nav-links a{
+
+    padding:12px;
+
+}
+
+
 
 
 
 .nav-buttons a{
 
+    font-size:11px;
 
     padding:8px 10px;
 
+}
+
+
+
+.hero h4{
 
     font-size:12px;
 
-
 }
-
 
 
 
 .hero h1{
 
-
     font-size:35px;
 
-
 }
-
 
 
 
 .hero p{
 
-
     font-size:15px;
 
-
 }
 
 
 
-.page-banner h1{
+.offer-banner,
+.booking-banner{
 
-
-    font-size:35px;
-
-
-}
-
-
-
-
-.contact-section{
-
-
-    grid-template-columns:1fr;
-
+    margin:25px 15px;
 
 }
-
-
-
-.auth-box{
-
-
-    padding:30px 25px;
-
-
-}
-
-
-
-.auth-box h1{
-
-
-    font-size:28px;
-
-
-}
-
 
 
 }
