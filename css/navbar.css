@@ -1,0 +1,235 @@
+/* =====================================
+   EPIC JOURNEYS RESPONSIVE NAVBAR
+===================================== */
+
+.navbar{
+    position:fixed;
+    top:15px;
+    left:50%;
+    transform:translateX(-50%);
+    width:min(95%,1300px);
+    padding:14px 22px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(15px);
+    border-radius:50px;
+    z-index:9999;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    text-decoration:none;
+    color:#fff;
+    font-size:26px;
+    font-weight:700;
+}
+
+.logo i{
+    color:#ff6b6b;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:28px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#fff;
+    font-size:15px;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#ff6b6b;
+}
+
+.nav-buttons{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.nav-buttons a{
+    text-decoration:none;
+    color:#fff;
+    background:#ff6b6b;
+    padding:10px 18px;
+    border-radius:30px;
+    font-size:14px;
+}
+
+.nav-buttons button{
+    width:42px;
+    height:42px;
+    border:none;
+    border-radius:50%;
+    cursor:pointer;
+    background:#ff6b6b;
+    color:#fff;
+    font-size:16px;
+}
+
+.mobile-btn{
+    display:none;
+}
+
+#menuBtn{
+    display:none;
+}
+
+/* =====================
+      TABLET
+===================== */
+
+@media (max-width:992px){
+
+.logo{
+    font-size:22px;
+}
+
+.nav-links{
+    gap:18px;
+}
+
+.nav-buttons a{
+    padding:8px 14px;
+    font-size:13px;
+}
+
+}
+
+/* =====================
+      MOBILE
+===================== */
+
+@media (max-width:768px){
+
+.navbar{
+
+    top:0;
+    left:0;
+    transform:none;
+
+    width:100%;
+    padding:12px 15px;
+
+    border-radius:0;
+
+}
+
+.logo{
+
+    font-size:20px;
+
+}
+
+.logo span{
+
+    white-space:nowrap;
+
+}
+
+.desktop-btn{
+
+    display:none;
+
+}
+
+#menuBtn{
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+}
+
+.nav-links{
+
+    position:absolute;
+
+    top:100%;
+
+    left:0;
+
+    width:100%;
+
+    display:none;
+
+    flex-direction:column;
+
+    gap:0;
+
+    background:#111;
+
+    padding:15px 0;
+
+}
+
+.nav-links.active{
+
+    display:flex;
+
+}
+
+.nav-links a{
+
+    width:100%;
+
+    padding:15px;
+
+    text-align:center;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.mobile-btn{
+
+    display:block;
+
+}
+
+}
+
+/* =====================
+   EXTRA SMALL PHONE
+===================== */
+
+@media (max-width:480px){
+
+.logo{
+
+    font-size:17px;
+
+}
+
+.logo i{
+
+    font-size:18px;
+
+}
+
+.nav-buttons{
+
+    gap:6px;
+
+}
+
+.nav-buttons button{
+
+    width:35px;
+
+    height:35px;
+
+    font-size:14px;
+
+}
+
+}
