@@ -833,264 +833,91 @@ padding:25px;
 
 
 /* ===============================
- MOBILE
+   MOBILE
 ================================ */
 
+@media (max-width:768px){
 
-@media(max-width:768px){
+    .navbar{
+        width:95%;
+        padding:12px 15px;
+    }
 
+    .logo{
+        font-size:20px;
+    }
 
-.navbar{
+    .nav-links{
+        display:none;
+    }
 
+    .nav-links.active{
+        display:flex;
+        flex-direction:column;
+        position:absolute;
+        top:70px;
+        left:0;
+        width:100%;
+        background:#111;
+        text-align:center;
+        padding:20px;
+        border-radius:20px;
+    }
 
-width:96%;
+    .nav-buttons a{
+        font-size:10px;
+        padding:7px 9px;
+    }
 
+    .nav-buttons button{
+        width:32px;
+        height:32px;
+    }
 
-padding:12px;
+    #menuBtn{
+        display:flex;
+    }
 
+    .hero h1{
+        font-size:35px;
+    }
 
+    .hero p{
+        font-size:14px;
+    }
+
+    .booking-box{
+        padding:25px;
+    }
+
+    .booking-box h2{
+        font-size:28px;
+    }
+
+    .gallery-box{
+        grid-template-columns:1fr;
+    }
+
+    section h2{
+        font-size:30px;
+    }
+
+    .whatsapp{
+        width:55px;
+        height:55px;
+        font-size:30px;
+    }
 }
 
-
-
-.logo{
-
-font-size:18px;
-
-}
-
-
-
-.nav-links{
-
-
-position:absolute;
-
-
-top:70px;
-
-
-left:0;
-
-
-width:100%;
-
-
-background:#111;
-
-
-flex-direction:column;
-
-
-text-align:center;
-
-
-padding:20px;
-
-
-display:none;
-
-
-border-radius:20px;
-
-
-}
-
-
-
-.nav-links.active{
-
-
-display:flex;
-
-
-}
-
-
-
-.nav-buttons a{
-
-
-font-size:10px;
-
-
-padding:7px 9px;
-
-
-}
-
-
-
-
-.nav-buttons button{
-
-
-width:32px;
-
-
-height:32px;
-
-
-}
-
-
-
-.hero h1{
-
-
-font-size:35px;
-
-
-}
-
-
-
-.hero p{
-
-
-font-size:14px;
-
-
-}
-
-
-
-.gallery-box{
-
-
-grid-template-columns:1fr;
-
-
-}
-
-
-
-section h2{
-
-
-font-size:30px;
-
-
-}
-
-
-
-.whatsapp{
-
-
-width:55px;
-
-
-height:55px;
-
-
-font-size:30px;
-
-
-}
-
-
-}
-
-@media(max-width:420px){
-
-.logo span{
-
-display:none;
-
-}
-
-.nav-buttons a{
-
-font-size:9px;
-
-padding:6px;
-
-}
-
-}
-/* =====================================
-   MOBILE NAVBAR FINAL FIX
-===================================== */
-
-@media(max-width:768px){
-
-
-.navbar{
-
-    width:96%;
-    padding:10px 12px;
-    margin:10px auto;
-
-}
-
-
-
-.logo{
-
-    font-size:16px;
-
-    white-space:nowrap;
-
-}
-
-
-
-.logo i{
-
-    font-size:18px;
-
-}
-
-
-
-
-.nav-buttons{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:4px;
-
-}
-
-
-
-.nav-buttons a{
-
-
-    padding:6px 8px;
-
-    font-size:10px;
-
-    white-space:nowrap;
-
-}
-
-
-
-.nav-buttons button{
-
-
-    width:30px;
-
-    height:30px;
-
-    font-size:11px;
-
-    padding:0;
-
-}
-
-
-
-#menuBtn{
-
-    display:flex;
-
-}
-
-
+@media (max-width:420px){
+
+    .logo span{
+        display:none;
+    }
+
+    .nav-buttons a{
+        font-size:9px;
+        padding:6px;
+    }
 
 }
