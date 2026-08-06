@@ -1,6 +1,5 @@
 /* =====================================
-   EPIC JOURNEYS HOME JAVASCRIPT
-   PREMIUM VERSION
+   EPIC JOURNEYS JAVASCRIPT
 ===================================== */
 
 
@@ -9,30 +8,23 @@
 // PAGE LOADER
 // ===============================
 
-
 window.addEventListener("load",()=>{
-
 
 const loader=document.querySelector(".loader");
 
 
 if(loader){
 
-
 setTimeout(()=>{
-
 
 loader.style.opacity="0";
 
 
 setTimeout(()=>{
 
-
 loader.style.display="none";
 
-
 },500);
-
 
 
 },1200);
@@ -69,16 +61,13 @@ menuBtn.addEventListener("click",()=>{
 navLinks.classList.toggle("active");
 
 
-
 const icon=menuBtn.querySelector("i");
-
 
 
 if(navLinks.classList.contains("active")){
 
 
 icon.classList.remove("fa-bars");
-
 
 icon.classList.add("fa-xmark");
 
@@ -89,7 +78,6 @@ else{
 
 
 icon.classList.remove("fa-xmark");
-
 
 icon.classList.add("fa-bars");
 
@@ -109,6 +97,47 @@ icon.classList.add("fa-bars");
 
 
 
+// ===============================
+// CLOSE MENU AFTER CLICK
+// ===============================
+
+
+document.querySelectorAll(".nav-links a").forEach(link=>{
+
+
+link.addEventListener("click",()=>{
+
+
+if(navLinks){
+
+navLinks.classList.remove("active");
+
+}
+
+
+if(menuBtn){
+
+
+const icon=menuBtn.querySelector("i");
+
+
+icon.classList.remove("fa-xmark");
+
+icon.classList.add("fa-bars");
+
+
+}
+
+
+});
+
+
+});
+
+
+
+
+
 
 
 // ===============================
@@ -117,7 +146,6 @@ icon.classList.add("fa-bars");
 
 
 const themeBtn=document.getElementById("themeBtn");
-
 
 
 if(themeBtn){
@@ -129,7 +157,6 @@ themeBtn.addEventListener("click",()=>{
 document.body.classList.toggle("dark");
 
 
-
 const icon=themeBtn.querySelector("i");
 
 
@@ -138,7 +165,6 @@ if(document.body.classList.contains("dark")){
 
 
 icon.classList.remove("fa-moon");
-
 
 icon.classList.add("fa-sun");
 
@@ -149,7 +175,6 @@ else{
 
 
 icon.classList.remove("fa-sun");
-
 
 icon.classList.add("fa-moon");
 
@@ -170,15 +195,14 @@ icon.classList.add("fa-moon");
 
 
 
-
 // ===============================
 // SCROLL ANIMATION
 // ===============================
 
 
-const animationItems=document.querySelectorAll(
+const items=document.querySelectorAll(
 
-".card,.review,.gallery-box img"
+".card,.offer-card,.review,.gallery-box img,.info-box"
 
 );
 
@@ -187,13 +211,15 @@ const animationItems=document.querySelectorAll(
 const observer=new IntersectionObserver((entries)=>{
 
 
-entries.forEach((entry)=>{
+entries.forEach(entry=>{
 
 
 if(entry.isIntersecting){
 
 
-entry.target.classList.add("show");
+entry.target.style.opacity="1";
+
+entry.target.style.transform="translateY(0)";
 
 
 }
@@ -216,10 +242,14 @@ threshold:0.2
 
 
 
-animationItems.forEach(item=>{
+items.forEach(item=>{
 
 
-item.classList.add("hidden");
+item.style.opacity="0";
+
+item.style.transform="translateY(40px)";
+
+item.style.transition=".6s";
 
 
 observer.observe(item);
@@ -233,31 +263,24 @@ observer.observe(item);
 
 
 
-
-
 // ===============================
 // BUTTON CLICK EFFECT
 // ===============================
 
 
-const buttons=document.querySelectorAll("a,button");
+document.querySelectorAll("button,a").forEach(btn=>{
 
 
-
-buttons.forEach(button=>{
-
-
-button.addEventListener("click",()=>{
+btn.addEventListener("click",()=>{
 
 
-button.style.transform="scale(.95)";
-
+btn.style.transform="scale(.95)";
 
 
 setTimeout(()=>{
 
 
-button.style.transform="";
+btn.style.transform="";
 
 
 },150);
@@ -275,41 +298,33 @@ button.style.transform="";
 
 
 
-
-
 // ===============================
-// CLOSE MOBILE MENU AFTER CLICK
+// CONTACT FORM
 // ===============================
 
 
-const menuLinks=document.querySelectorAll(".nav-links a");
+const contactForm=document.querySelector(".contact-form");
 
 
-
-menuLinks.forEach(link=>{
-
-
-link.addEventListener("click",()=>{
+if(contactForm){
 
 
-navLinks.classList.remove("active");
+contactForm.addEventListener("submit",(e)=>{
 
 
-const icon=menuBtn.querySelector("i");
+e.preventDefault();
 
 
-icon.classList.remove("fa-xmark");
+alert("Thank you! We will contact you soon.");
 
 
-icon.classList.add("fa-bars");
+contactForm.reset();
 
 
 });
 
 
-});
-
-
+}
 
 
 
@@ -318,12 +333,11 @@ icon.classList.add("fa-bars");
 
 
 // ===============================
-// FOOTER YEAR
+// FOOTER YEAR UPDATE
 // ===============================
 
 
 const footer=document.querySelector("footer p");
-
 
 
 if(footer){
